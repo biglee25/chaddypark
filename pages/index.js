@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Next Starter</title>
+        <title>Next Starters</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
