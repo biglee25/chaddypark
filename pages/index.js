@@ -1,15 +1,43 @@
+import Container from '../components/container'
+import MoreStories from '../components/more-stories'
+import HeroPost from '../components/hero-post'
+import Hero from '../components/Hero'
+import Layout from '../components/layout'
+import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Nav from '../components/nav'
 
-export default function Home() {
+
+export default function Index({ posts, preview }) {
+  const heroPost = posts[0]
+  const morePosts = posts.slice(1)
   return (
     <>
-      <Head>
-        <title>Next Starter</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Nav />
+      <Hero/>
+      <Layout preview={preview}>
+        <Head>
+          <title>Chadderton Park Sports Club</title>
+        </Head>
+        <Container>
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        </Container>
+      </Layout>
     </>
   )
+}
+
+export async function getStaticProps({ preview = false }) {
+  const posts = (await getAllPostsForHome(preview)) || []
+  return {
+    props: { posts, preview },
+  }
 }
