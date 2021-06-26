@@ -3,7 +3,7 @@ import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Footer() {
   return (
-    <footer className="bg-green-400 text-white">
+    <footer className="bg-primaryyellow text-black">
       <Container>
         <div className="py-28 flex flex-col items-center">
           <h3 className="text-2xl font-bold text-center mb-5">
