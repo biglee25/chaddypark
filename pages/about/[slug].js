@@ -25,11 +25,12 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(slug) {
   const { pages } = await graphcms.request(`
     {
       pages {
         title
+        slug
       }
     }
   `);
