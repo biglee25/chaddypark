@@ -11,7 +11,8 @@ export async function getStaticProps() {
     `
       { 
         teams {
-          title,
+          slug
+          title
         }
       }
     `

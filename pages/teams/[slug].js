@@ -5,14 +5,14 @@ const graphcms = new GraphQLClient(
 );
 
 export async function getStaticProps({ params }) {
-  const { teams } = await graphcms.request(
+  const { team } = await graphcms.request(
     `
     query TeamPageQuery($slug: String!) {
-        teams {
-          title,
-          slug
-        }
+      team(where: { slug: $slug }) {
+        slug
+        title
       }
+    }
   `,
     {
       slug: params.slug,
@@ -21,9 +21,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      teams,
-      title,
-      slug,
+      team,
     },
   };
 }
@@ -32,8 +30,8 @@ export async function getStaticPaths() {
   const { teams } = await graphcms.request(`
     {
       teams {
-        title,
         slug
+        title
       }
     }
   `);
@@ -46,18 +44,8 @@ export async function getStaticPaths() {
   };
 }
 
-export default ({ slug }) => (
-  <React.Fragment>
-    <h1>{team.title}</h1>
-  </React.Fragment>
+export default ({ slug, team }) => (
+  <>
+    <h1 className="text-6xl font-bold text-center mt-12">{team.title}</h1>
+  </>
 );
-
-// export async function getStaticPaths() {
-//   const posts = await getAllPostsWithSlug()
-//   return {
-//     paths: posts.map(({ slug }) => ({
-//       params: { slug },
-//     })),
-//     fallback: true,
-//   }
-// }
