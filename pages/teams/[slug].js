@@ -9,7 +9,8 @@ export async function getStaticProps({ params }) {
     `
     query TeamPageQuery($slug: String!) {
         teams {
-          name,
+          title,
+          slug
         }
       }
   `,
