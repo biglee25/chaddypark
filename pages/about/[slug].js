@@ -1,3 +1,9 @@
+export default function Test() {
+  return(
+    <h1>test</h1>
+  )
+}
+
 // import { GraphQLClient } from 'graphql-request';
 
 // const graphcms = new GraphQLClient(
