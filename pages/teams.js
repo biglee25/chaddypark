@@ -3,10 +3,8 @@ import Link from 'next/link';
 import { GraphQLClient } from 'graphql-request';
 
 export async function getStaticProps() {
-  const graphcms = new GraphQLClient(
-    'https://api-eu-central-1.graphcms.com/v2/ckpzqrd16959901w561z47ak4/master'
-  );
-
+  const graphcms = new GraphQLClient((process.env.GRAPHCMS_PROJECT_API))
+  
   const { teams } = await graphcms.request(
     `
       { 

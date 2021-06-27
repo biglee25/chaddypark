@@ -1,8 +1,13 @@
-import { GraphQLClient } from 'graphql-request';
+import { GraphQLClient } from 'graphql-request'
 
-const graphcms = new GraphQLClient(
-  'https://api-eu-central-1.graphcms.com/v2/ckpzqrd16959901w561z47ak4/master'
-);
+import Container from '../../components/container'
+
+import PostBody from '../../components/post-body'
+import Layout from '../../components/layout'
+
+
+
+const graphcms = new GraphQLClient((process.env.GRAPHCMS_PROJECT_API))
 
 export async function getStaticProps({ params }) {
   const { team } = await graphcms.request(
@@ -11,6 +16,9 @@ export async function getStaticProps({ params }) {
       team(where: { slug: $slug }) {
         slug
         title
+        content {
+          text
+        }
       }
     }
   `,
@@ -32,6 +40,9 @@ export async function getStaticPaths() {
       teams {
         slug
         title
+        content {
+          text
+        }
       }
     }
   `);
@@ -44,8 +55,13 @@ export async function getStaticPaths() {
   };
 }
 
-export default ({ slug, team }) => (
+export default ({ team }) => (
   <>
+  <Layout>
+    <Container>
     <h1 className="text-6xl font-bold text-center mt-12">{team.title}</h1>
+    <p className="text-sm text-center">{team.content.text}</p>
+    </Container>
+  </Layout>
   </>
 );
