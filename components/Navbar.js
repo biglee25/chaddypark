@@ -14,9 +14,10 @@ export default function Example() {
         <Image
             src="/images/chaddy-logo.svg"
             alt="Chadderton Park Sports Club"
-            width={100}
-            height={100}
+            width={75}
+            height={75}
         />
+        Chadderton Park<br />Sports Club
         </a>
     <div>
           <Menu.Button className="inline-flex justify-center px-4 py-2 text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
@@ -28,11 +29,11 @@ export default function Example() {
           enter="transition ease-out duration-100"
           enterFrom="transform opacity-0 scale-100"
           enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
+          leave="transition ease-in duration-100"
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-100"
         >
-          <Menu.Items className="absolute top-28 right-0 w-full origin-top-right bg-yellow-400 py-12 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute top-24 right-0 w-full origin-top-right bg-yellow-400 py-12 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                   <a className="px-3 py-2 flex items-center justify-center text-1xl md:text-xs uppercase font-bold leading-snug hover:opacity-75">

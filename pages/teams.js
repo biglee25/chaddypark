@@ -23,13 +23,20 @@ export async function getStaticProps() {
   };
 }
 
-export default ({ teams }) =>
-  teams.map(({ slug, title }) => (
-    <Link key={slug} href={`/teams/${slug}`}>
-      <div className="grid grid-cols-1 gap-4 h-72 w-1/2 m-auto">
-        <div className="flex items-center justify-center bg-yellow-200  border-l-8 border-green-400 shadow-md m-2">
-          <a>{title}</a>
-        </div>  
-      </div>
-    </Link>
-  ));
+export default function Teams({ teams }) {
+  return (
+    <div className="w-full md:w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-4 text-center p-12 m-auto cursor-pointer">
+      {teams.map((team) => (
+        <Link href={`/teams/${encodeURIComponent(team.slug)}`}>
+          <div className="bg-primaryyellow hover:bg-yellow-400 p-5 h-32 flex flex-col justify-center">
+            <div key={team.id}>
+                <a>{team.title}</a>
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  )
+}
+  
+ 

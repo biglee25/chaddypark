@@ -2,7 +2,7 @@ import { GraphQLClient } from 'graphql-request'
 
 import Container from '../../components/container'
 
-import PostBody from '../../components/post-body'
+import Link from 'next/link'
 import Layout from '../../components/layout'
 
 
@@ -17,7 +17,7 @@ export async function getStaticProps({ params }) {
         slug
         title
         content {
-          text
+          html
         }
       }
     }
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
         slug
         title
         content {
-          text
+          html
         }
       }
     }
@@ -55,13 +55,23 @@ export async function getStaticPaths() {
   };
 }
 
+
 export default ({ team }) => (
   <>
   <Layout>
     <Container>
-    <h1 className="text-6xl font-bold text-center mt-12">{team.title}</h1>
-    <p className="text-sm text-center">{team.content.text}</p>
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-center mt-12 pb-5">{team.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto" />
+      </div>
     </Container>
+    <div className="w-full m-auto text-center mt-12">
+      <button className="bg-primaryyellow hover:bg-yellow-400 px-12 py-5">
+        <Link href="/teams" className="text-black">Back to Teams</Link>
+      </button>
+    </div>
   </Layout>
+
   </>
 );
+
