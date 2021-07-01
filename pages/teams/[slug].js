@@ -104,7 +104,7 @@ export default ({ team }) => (
           </div>
 
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-12 rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto pt-12 text-black" />
         </div>
