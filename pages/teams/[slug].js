@@ -53,7 +53,11 @@ export async function getStaticProps({ params }) {
           url
           width
           height
-      } 
+      }
+      test {
+        url
+        width
+        height
     }
     }
   `,
@@ -111,7 +115,11 @@ export async function getStaticPaths() {
             url
             width
             height
-        } 
+        }
+        test {
+          url
+          width
+          height
       }
     }
   `);
@@ -183,14 +191,14 @@ export default ({ team }) => (
         height={team.gallery4.height}
         layout="responsive"
         />
-      {/* {team.gallery.map(( team, url, width, height ) => 
-          <img
-            src="{team.gallery.url}"
-            width="{team.gallery.width}"
-            height="{team.gallery.height}"
+      {team.test.map(( url ) => 
+          <Image
+            src={team.test.url}
+            width={team.test.width}
+            height={team.test.height}
             className="px-5"
           />
-        )} */}
+        )} 
       </div>
     </Container>
     <div className="w-full m-auto text-center mt-12">
