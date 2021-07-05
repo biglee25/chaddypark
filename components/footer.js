@@ -13,7 +13,8 @@ export default function Footer() {
             Affiliation No..W-Man2950 | Club ID 66741
           </h4>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2 pt-12">
-            website by<a href="https://invadedbypixels.com">Invaded by Pixels</a>
+            Website by&nbsp;
+            <a href="https://invadedbypixels.com">Invaded by Pixels</a>
           </div>
         </div>
       </Container>

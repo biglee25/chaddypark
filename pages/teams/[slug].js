@@ -34,7 +34,27 @@ export async function getStaticProps({ params }) {
           url
           width
         }
-      }
+        gallery1 {
+          url
+          width
+          height
+      } 
+      gallery2 {
+          url
+          width
+          height
+      } 
+      gallery3 {
+          url
+          width
+          height
+      } 
+      gallery4 {
+          url
+          width
+          height
+      } 
+    }
     }
   `,
     {
@@ -72,7 +92,26 @@ export async function getStaticPaths() {
           url
           width
         }
-
+        gallery1 {
+            url
+            width
+            height
+        } 
+        gallery2 {
+            url
+            width
+            height
+        } 
+        gallery3 {
+            url
+            width
+            height
+        } 
+        gallery4 {
+            url
+            width
+            height
+        } 
       }
     }
   `);
@@ -86,23 +125,25 @@ export async function getStaticPaths() {
 }
 
 
+
 export default ({ team }) => (
   <>
   <Layout>
     <Container>
       <div className="text-center">
-        <h1 className="text-center mt-12">{team.title}</h1>
-        <h2 className="font-bold text-center pb-5">{team.heading}</h2>
+        <div className="bg-primaryyellow border-b-4 border-primarygreen flex flex-col items-center justify-center py-12 my-12">
+          <h1 className="mt-12">{team.title}</h1>
+          <h2 className="font-bold">{team.heading}</h2>
+        </div>
         <Image
             src={team.image.url}
             width={team.image.width}
             height={team.image.height}
+            layout="responsive"
           />
-          <div className="bg-yellow-200 my-12 rounded-lg p-5">
+          <div className="bg-primaryyellow my-12 rounded-lg p-5">
           <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
-
           </div>
-
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
@@ -116,6 +157,41 @@ export default ({ team }) => (
           />
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
+        <Image
+        src={team.gallery1.url}
+        width={team.gallery1.width}
+        height={team.gallery1.height}
+        layout="responsive"
+
+        />
+        <Image
+        src={team.gallery2.url}
+        width={team.gallery2.width}
+        height={team.gallery2.height}
+        layout="responsive"
+        />
+        <Image
+        src={team.gallery3.url}
+        width={team.gallery3.width}
+        height={team.gallery3.height}
+        layout="responsive"
+        />
+        <Image
+        src={team.gallery4.url}
+        width={team.gallery4.width}
+        height={team.gallery4.height}
+        layout="responsive"
+        />
+      {/* {team.gallery.map(( team, url, width, height ) => 
+          <img
+            src="{team.gallery.url}"
+            width="{team.gallery.width}"
+            height="{team.gallery.height}"
+            className="px-5"
+          />
+        )} */}
+      </div>
     </Container>
     <div className="w-full m-auto text-center mt-12">
     <Link href="/teams" className="text-black">
@@ -125,7 +201,5 @@ export default ({ team }) => (
       </Link>
     </div>
   </Layout>
-
   </>
 );
-

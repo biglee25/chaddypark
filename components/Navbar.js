@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Example() {
   return (
-    <div className="bg-primaryyellow text-black sticky top-0 w-full flex flex-wrap items-center justify-between px-2 z-50">
+    <div className="bg-primaryyellow shadow-lg text-black sticky top-0 w-full flex flex-wrap items-center justify-between px-2 z-50">
       <Menu as="div" className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <a className="flex items-center align-center text-sm font-bold mr-4 py-2 uppercase" href="/">
           <Image
