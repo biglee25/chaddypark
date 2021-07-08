@@ -53,11 +53,7 @@ export async function getStaticProps({ params }) {
           url
           width
           height
-      }
-      test {
-        url
-        width
-        height
+      } 
     }
     }
   `,
@@ -115,11 +111,7 @@ export async function getStaticPaths() {
             url
             width
             height
-        }
-        test {
-          url
-          width
-          height
+        } 
       }
     }
   `);
@@ -139,7 +131,7 @@ export default ({ team }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-primaryyellow border-b-4 border-primarygreen flex flex-col items-center justify-center py-12 my-12">
+        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12">
           <h1 className="mt-12">{team.title}</h1>
           <h2 className="font-bold">{team.heading}</h2>
         </div>
@@ -191,14 +183,14 @@ export default ({ team }) => (
         height={team.gallery4.height}
         layout="responsive"
         />
-      {team.test.map(( url ) => 
-          <Image
-            src={team.test.url}
-            width={team.test.width}
-            height={team.test.height}
+      {/* {team.gallery.map(( team, url, width, height ) => 
+          <img
+            src="{team.gallery.url}"
+            width="{team.gallery.width}"
+            height="{team.gallery.height}"
             className="px-5"
           />
-        )} 
+        )} */}
       </div>
     </Container>
     <div className="w-full m-auto text-center mt-12">
