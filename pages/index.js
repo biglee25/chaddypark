@@ -28,12 +28,22 @@ export default function Index({ posts, preview }) {
           <title>Chadderton Park Sports Club</title>
         </Head>
         <Container>
+          <h1 className="text-center bg-black text-primaryyellow p-5 mb-5 rounded-t-lg">The FA Grassroots National Club of the Year 2019</h1>
+            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="100%" height="600px"></iframe>
+        </Container>
+        <Container>
           <div className="grid md:grid-cols-3 gap-12 text-center my-12 uppercase">
-            <Link href="/teams">
-              <a>
-                <Card className="bg-hero-bg bg-cover bg-no-repeat bg-center w-full">Football Teams</Card>
-              </a>
-            </Link>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Football Teams
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
             <Link href="/teams">
               <a>
                 <Card>Pan Disablility Football</Card>

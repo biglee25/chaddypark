@@ -27,42 +27,48 @@ export default function Navbar({ fixed }) {
               </a>
               <button className="text-black cursor-pointer px-3 py-1 flex items-center lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" type="button">
                <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setExpanded(!expanded)} />
-               
               </button>
               </div>
             <div
               className={"lg:flex flex-grow items-center justify-center m-auto h-auto transition duration-500" + (expanded ? " flex  " : " hidden")}>
               <ul className="flex flex-col align-center justify-center lg:flex-row list-none lg:ml-auto h-5/6 md:h-auto py-12">
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:opacity-75" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/">
                         Home
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:opacity-75" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                    <Link href="/about">
+                        About us
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                     <Link href="/teams">
                         Teams
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:opacity-75" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/information">
                         Information
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:opacity-75" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/news">
                         News
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:opacity-75" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/contact">
                         Contact us
                     </Link>

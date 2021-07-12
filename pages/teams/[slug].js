@@ -7,7 +7,6 @@ import Image from 'next/image'
 import Layout from '../../components/layout'
 
 
-
 const graphcms = new GraphQLClient((process.env.GRAPHCMS_PROJECT_API))
 
 export async function getStaticProps({ params }) {
@@ -111,7 +110,7 @@ export async function getStaticPaths() {
             url
             width
             height
-        } 
+        }
       }
     }
   `);
@@ -131,9 +130,9 @@ export default ({ team }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12">
-          <h1 className="mt-12">{team.title}</h1>
-          <h2 className="font-bold">{team.heading}</h2>
+        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
+          <h1>{team.title}</h1>
+          <h2>{team.heading}</h2>
         </div>
         <Image
             src={team.image.url}
@@ -183,15 +182,12 @@ export default ({ team }) => (
         height={team.gallery4.height}
         layout="responsive"
         />
-      {/* {team.gallery.map(( team, url, width, height ) => 
-          <img
-            src="{team.gallery.url}"
-            width="{team.gallery.width}"
-            height="{team.gallery.height}"
-            className="px-5"
-          />
-        )} */}
+
+
       </div>
+      <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.image.html }} className="m-auto pt-12 text-black" />
+        </div>
     </Container>
     <div className="w-full m-auto text-center mt-12">
     <Link href="/teams" className="text-black">
