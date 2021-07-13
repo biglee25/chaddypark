@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import Card from '../components/card'
 
@@ -28,11 +29,11 @@ export default function Index({ posts, preview }) {
           <title>Chadderton Park Sports Club</title>
         </Head>
         <Container>
-          <h1 className="text-center bg-black text-primaryyellow p-5 mb-5 rounded-t-lg">The FA Grassroots National Club of the Year 2019</h1>
-            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="100%" height="600px"></iframe>
+          <h1 className="text-center bg-black text-white p-5 mb-5 rounded-t-lg font-thin">The FA Grassroots National Club of the Year 2019</h1>
+            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="100%" height="100%" className="rounded-b-lg h-96"></iframe>
         </Container>
         <Container>
-          <div className="grid md:grid-cols-3 gap-12 text-center my-12 uppercase">
+          <div className="px-12 grid md:grid-cols-3 gap-12 text-center my-12 uppercase">
             <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
@@ -44,32 +45,64 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <Link href="/teams">
-              <a>
-                <Card>Pan Disablility Football</Card>
-              </a>
-            </Link>
-            <Link href="/teams">
-              <a>
-                <Card>Adult Fun Football</Card>
-              </a>
-            </Link>
-            <Link href="/teams">
-              <a>
-                <Card>Steppers / walking group</Card>
-              </a>
-            </Link>
-            <Link href="/teams">
-              <a>
-                <Card>Community Engagement</Card>
-              </a>
-            </Link>
-            <Link href="/teams">
-              <a>
-                <Card>Voluntary Jobs Available</Card>
-              </a>
-            </Link>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Pan Disabilty Football
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Adult Fun
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Steppers / Walkers Group
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Community Engagement
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
+            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <Link href="/teams">
+                <a>
+                  <Card>
+                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                      Volutary Jobs Available
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </div>
           </div>
+          <h1 className="text-center bg-black text-white p-5 mb-5 rounded-t-lg font-thin">Latest News</h1>
+
           {heroPost && (
             <HeroPost
               title={heroPost.title}

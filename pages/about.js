@@ -1,38 +1,43 @@
-export default function About() {
-  return(
-    <h1>about page</h1>
+
+import { GraphQLClient } from 'graphql-request';
+import Container from '../components/container';
+
+export async function getStaticProps() {
+  const graphcms = new GraphQLClient((process.env.GRAPHCMS_PROJECT_API))
+  
+  const { page } = await graphcms.request(
+    `
+    query MyQuery {
+      page(where: {slug: "about"}) {
+        id
+        title
+        subtitle
+        content {
+          html
+        }
+      }
+    }
+    
+    `
+  );
+
+  return {
+    props: {
+      page
+    },
+  };
+}
+
+export default function About({ page }) {
+  return (
+    <Container>
+        <div className="=">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left">{page.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: page.content.html }} className="m-auto" />
+        </div>
+
+    </Container>
   )
 }
-// import Link from 'next/link';
-// import { GraphQLClient } from 'graphql-request';
-
-// export async function getStaticProps() {
-//   const graphcms = new GraphQLClient(
-//     'https://api-eu-central-1.graphcms.com/v2/ckpzqrd16959901w561z47ak4/master'
-//   );
-
-//   const { pages } = await graphcms.request(
-//     `
-//       { 
-//         pages {
-//           title
-//           subtitle
-//         }
-//       }
-//     `
-//   );
-
-//   return {
-//     props: {
-//       pages,
-//     },
-//   };
-// }
-
-// export default ({ pages }) =>
-//   pages.map(({ slug, title, subtitle }) => (
-//     <>
-//       <p>{title}</p>
-//       <p>{subtitle}</p>
-//       </>
-//   ));
+  
+ 
