@@ -13,7 +13,7 @@ export default function Navbar({ fixed }) {
 
     return (
       <>
-        <nav expanded={expanded} className="fixed top-0 w-full flex flex-wrap items-center justify-between px-2 bg-primaryyellow z-50 shadow-md">
+        <nav expanded={expanded} className="fixed top-0 w-full h-auto flex flex-wrap items-center justify-between px-2 bg-primaryyellow z-50 shadow-md">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <a className="flex items-center align-center text-sm font-bold mr-4 py-2 uppercase" href="/">

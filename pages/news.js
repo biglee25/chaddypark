@@ -11,24 +11,25 @@ export default function Index({ posts, preview }) {
   const morePosts = posts.slice(1)
   return (
     <>
-      <Layout preview={preview}>
-        <Head>
-          <title>Chadderton Park Sports Club</title>
-        </Head>
-        <Container>
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+      <Head>
+        <title>Chadderton Park Sports Club</title>
+      </Head>
+        <Layout preview={preview}>
+            <Container>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left mb-12">Latest News</h1>
+              {heroPost && (
+                <HeroPost
+                  title={heroPost.title}
+                  coverImage={heroPost.coverImage}
+                  date={heroPost.date}
+                  author={heroPost.author}
+                  slug={heroPost.slug}
+                  excerpt={heroPost.excerpt}
+                />
+              )}
+              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            </Container>
+        </Layout>
     </>
   )
 }

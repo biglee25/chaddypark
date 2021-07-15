@@ -7,6 +7,11 @@ module.exports = {
       backgroundImage: theme => ({
         'hero-bg': "url('/images/hero-image.jpg')",
         'teams-bg': "url('/images/hero-image.jpg')",
+        'disablity-bg': "url('/images/disablity.jpg')",
+        'adultfun-bg': "url('/images/adultfun.jpg')",
+        'steppers-bg': "url('/images/steppers.jpg')",
+        'community-bg': "url('/images/community.jpg')",
+        'voluntaryjobs-bg': "url('/images/voluntaryjobs.jpg')",
        }),
        colors: {
         white: '#fff',

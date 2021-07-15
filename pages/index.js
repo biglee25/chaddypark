@@ -29,11 +29,11 @@ export default function Index({ posts, preview }) {
           <title>Chadderton Park Sports Club</title>
         </Head>
         <Container>
-          <h1 className="text-center bg-black text-white p-5 mb-5 rounded-t-lg font-thin">The FA Grassroots National Club of the Year 2019</h1>
+          <h1 className="text-center bg-black text-white py-5 mb-5 font-thin">The FA Grassroots National Club of the Year 2019</h1>
             <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="100%" height="100%" className="rounded-b-lg h-96"></iframe>
         </Container>
         <Container>
-          <div className="px-12 grid md:grid-cols-3 gap-12 text-center my-12 uppercase">
+          <div className="grid md:grid-cols-3 gap-4 text-center my-12 uppercase">
             <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
@@ -45,7 +45,7 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+            <div className="bg-disablity-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
@@ -56,7 +56,7 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+            <div className="bg-adultfun-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
@@ -67,7 +67,7 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+            <div className="bg-steppers-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
@@ -78,7 +78,7 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+            <div className="bg-community-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
@@ -89,7 +89,7 @@ export default function Index({ posts, preview }) {
                 </a>
               </Link>
             </div>
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
+            <div className="bg-voluntaryjobs-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
