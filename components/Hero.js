@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="container mx-auto px-2 mt-5 md:mt-10 lg:mt-16">
+    <section className="container mx-auto md:px-2 md:mt-10 lg:mt-16">
         <div className="bg-hero-bg bg-cover bg-top bg-no-repeat">
           <div className="bg-black bg-opacity-30">
             <div className="container mx-auto flex flex-col md:flex-row items-center">  

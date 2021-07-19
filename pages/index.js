@@ -30,7 +30,7 @@ export default function Index({ posts, preview }) {
         </Head>
         <Container>
           <h1 className="text-center bg-black text-white py-5 mb-5 font-thin">The FA Grassroots National Club of the Year 2019</h1>
-            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="100%" height="100%" className="rounded-b-lg h-96"></iframe>
+            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="50%" height="100%" className="rounded-b-lg h-96 mx-auto"></iframe>
         </Container>
         <Container>
           <div className="grid md:grid-cols-3 gap-4 text-center my-12 uppercase">
@@ -38,18 +38,18 @@ export default function Index({ posts, preview }) {
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Football Teams
                     </div>
                   </Card>
                 </a>
               </Link>
             </div>
-            <div className="bg-disablity-bg bg-center bg-cover bg-no-repeat rounded-lg">
+              <div className="bg-disablity-bg bg-center bg-cover bg-no-repeat rounded-lg">
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                  <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Pan Disabilty Football
                     </div>
                   </Card>
@@ -60,7 +60,7 @@ export default function Index({ posts, preview }) {
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Adult Fun
                     </div>
                   </Card>
@@ -71,7 +71,7 @@ export default function Index({ posts, preview }) {
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Steppers / Walkers Group
                     </div>
                   </Card>
@@ -82,7 +82,7 @@ export default function Index({ posts, preview }) {
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Community Engagement
                     </div>
                   </Card>
@@ -93,7 +93,7 @@ export default function Index({ posts, preview }) {
               <Link href="/teams">
                 <a>
                   <Card>
-                    <div className="w-full font-bold bg-black text-white p-2 flex items-end justify-center hover:bg-primaryyellow hover:text-black transition duration-500 ease-in-out">
+                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
                       Volutary Jobs Available
                     </div>
                   </Card>

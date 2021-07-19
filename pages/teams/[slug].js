@@ -126,7 +126,6 @@ export async function getStaticPaths() {
 
 
 export default ({ team }) => (
-  <>
   <Layout>
     <Container>
       <div className="text-center">
@@ -197,5 +196,4 @@ export default ({ team }) => (
       </Link>
     </div>
   </Layout>
-  </>
 );
