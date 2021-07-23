@@ -30,7 +30,10 @@ export default function Index({ posts, preview }) {
         </Head>
         <Container>
           <h1 className="text-center bg-black text-white py-5 mb-5 font-thin">The FA Grassroots National Club of the Year 2019</h1>
-            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" width="50%" height="100%" className="rounded-b-lg h-96 mx-auto"></iframe>
+          <div className="block md:flex">
+            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"></iframe>
+            <iframe src="https://www.youtube.com/embed/7UMsvMITjg4" className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"></iframe>
+          </div>
         </Container>
         <Container>
           <div className="grid md:grid-cols-3 gap-4 text-center my-12 uppercase">
