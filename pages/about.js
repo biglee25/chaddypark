@@ -76,14 +76,14 @@ export default function About({ aboutUs }) {
             layout="responsive"
           />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
       <Image
             src={aboutUs.gridtwo.url}
             width={aboutUs.gridtwo.width}
             height={aboutUs.gridtwo.height}
             layout="responsive"
           />
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center order-first md:order-last">
             <div dangerouslySetInnerHTML={{ __html: aboutUs.extraContent.html }} className="pb-12 md:pl-12" />
           </div>
       </div>

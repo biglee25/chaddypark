@@ -5,8 +5,6 @@ import Hero from '../components/Hero'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
 
 import Card from '../components/card'
 
@@ -36,75 +34,10 @@ export default function Index({ posts, preview }) {
           </div>
         </Container>
         <Container>
-          <div className="grid md:grid-cols-3 gap-4 text-center my-12 uppercase">
-            <div className="bg-teams-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Football Teams
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-              <div className="bg-disablity-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                  <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Pan Disabilty Football
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-            <div className="bg-adultfun-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Adult Fun
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-            <div className="bg-steppers-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Steppers / Walkers Group
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-            <div className="bg-community-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Community Engagement
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-            <div className="bg-voluntaryjobs-bg bg-center bg-cover bg-no-repeat rounded-lg">
-              <Link href="/teams">
-                <a>
-                  <Card>
-                    <div className="w-full font-bold bg-primaryyellow text-black p-2 flex items-end justify-center hover:bg-primarygreen transition duration-500 ease-in-out">
-                      Volutary Jobs Available
-                    </div>
-                  </Card>
-                </a>
-              </Link>
-            </div>
-          </div>
-          <h1 className="text-center bg-black text-white p-5 mb-5 rounded-t-lg font-thin">Latest News</h1>
+          <Card />
+        </Container>
+        <Container>
+          <h1 className="text-center bg-black text-white p-5 mb-5 font-thin">Latest News</h1>
 
           {heroPost && (
             <HeroPost
