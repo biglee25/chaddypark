@@ -71,7 +71,6 @@ export default function Card ( {children} ) {
                     </a>
                 </Link>
             </div>
-
         </div>
     )
 }

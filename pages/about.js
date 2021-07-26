@@ -69,12 +69,13 @@ export default function About({ aboutUs }) {
       <div className="flex items-center justify-center">
             <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
           </div>
-          <Image
-            src={aboutUs.gridone.url}
-            width={aboutUs.gridone.width}
-            height={aboutUs.gridone.height}
-            layout="responsive"
-          />
+          
+            <Image
+              src={aboutUs.gridone.url}
+              width={aboutUs.gridone.width}
+              height={aboutUs.gridone.height}
+              layout="responsive"
+            />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
       <Image

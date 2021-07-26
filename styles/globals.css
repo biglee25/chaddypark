@@ -7,5 +7,5 @@ h1 {
 }
 
 h2 {
-  @apply font-semibold text-2xl p-5;
+  @apply font-semibold text-2xl py-5;
 }
