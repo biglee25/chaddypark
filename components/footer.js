@@ -12,9 +12,8 @@ export default function Footer() {
           <h4>
             Affiliation No..W-Man2950 | Club ID 66741
           </h4>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2 pt-12">
-            Website by&nbsp;
-            <a href="https://invadedbypixels.com">Invaded by Pixels</a>
+          <div className="bg-black p-5 text-white flex flex-col justify-center items-center lg:pl-4  mt-12">
+            <a href="https://invadedbypixels.com">Website by Invaded by Pixels</a>
           </div>
         </div>
       </Container>

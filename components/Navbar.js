@@ -23,7 +23,7 @@ export default function Navbar({ fixed }) {
                 width={75}
                 height={75}
               />
-              Chadderton Park<br />Sports Club
+              <div className="font-black">Chadderton Park<br />Sports Club</div>
               </a>
               <button className="text-black cursor-pointer px-3 py-1 flex items-center lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" type="button">
                <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setExpanded(!expanded)} />

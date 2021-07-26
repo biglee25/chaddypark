@@ -11,7 +11,7 @@ export async function getStaticProps() {
   const { contacts } = await graphcms.request(
     `
     query MyQuery {
-      contacts {
+      contacts (orderBy: order_ASC) {
         profileImage {
           url
           width
@@ -39,24 +39,27 @@ export default function Contacts({ contacts }) {
   return (
     <Layout>
       <Container>
-        <h1 className="text-center bg-black text-white p-5 mb-5">CHADDERTON SPORTS CLUB COMMITTEE</h1>
+        <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Chadderton Sports Club Commitee</h1>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 text-center p-12 m-auto">
           {contacts.map((contact) => (
-            <div className="h-24">
+            <div className="rounded-xl bg-gray-100 shadow-xl pb-5 my-12">
+              <div className="mx-auto relative -inset-y-12">
                 <Image
                   src={contact.profileImage.url}
                   width={contact.profileImage.width}
                   height={contact.profileImage.height}
-                  layout="responsive"
+                  className="rounded-full"
                 />
-                <h2>{contact.name}</h2>
-                <p className="font-semibold pb-5">{contact.title}</p>
+              </div>
+                <h2 className="mb-5 bg-primaryyellow shadow-md py-5 mx-4">{contact.name}</h2>
+                <p className="font-bold pb-5">{contact.title}</p>
                 <p className="pb-5">{contact.telephone}</p>
                 <div className="flex items-center justify-center">
                   <div dangerouslySetInnerHTML={{ __html: contact.email.html }} />
                 </div>
             </div>
       ))}
+
         </div>
       </Container>
     </Layout>

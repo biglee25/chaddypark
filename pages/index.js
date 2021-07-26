@@ -27,7 +27,7 @@ export default function Index({ posts, preview }) {
           <title>Chadderton Park Sports Club</title>
         </Head>
         <Container>
-          <h1 className="text-center bg-black text-white py-5 mb-5">The FA Grassroots National Club of the Year 2019</h1>
+          <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
           <div className="block md:flex">
             <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"></iframe>
             <iframe src="https://www.youtube.com/embed/7UMsvMITjg4" className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"></iframe>
@@ -37,7 +37,7 @@ export default function Index({ posts, preview }) {
           <Card />
         </Container>
         <Container>
-          <h1 className="text-center bg-black text-white p-5 mb-5">Latest News</h1>
+          <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Latest News</h1>
 
           {heroPost && (
             <HeroPost
