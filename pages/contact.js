@@ -40,9 +40,9 @@ export default function Contacts({ contacts }) {
     <Layout>
       <Container>
         <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Chadderton Sports Club Commitee</h1>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 text-center p-12 m-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:p-12 m-auto">
           {contacts.map((contact) => (
-            <div className="rounded-xl bg-gray-100 shadow-xl pb-5 my-12">
+            <div className="rounded-xl bg-gray-100 shadow-xl pb-5 my-12 px-5">
               <div className="mx-auto relative -inset-y-12">
                 <Image
                   src={contact.profileImage.url}
