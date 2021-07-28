@@ -33,7 +33,31 @@ export async function getStaticProps() {
           width
           height
         }
-        extraContent {
+        content2 {
+          html
+        }
+        content3 {
+          html
+        }
+        gridthree {
+          url
+          width
+          height
+        }
+        gridfour {
+          url
+          width
+          height
+        }
+        gridfive {
+          url
+          width
+          height
+        }
+        content4 {
+          html
+        }
+        content5 {
           html
         }
       }
@@ -66,9 +90,9 @@ export default function About({ aboutUs }) {
     </Container>
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
-      <div className="flex items-center justify-center">
-          <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
-      </div>
+        <div className="flex items-center justify-center">
+            <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
+        </div>
         <div className="p-0 md:p-12 my-auto">
           <Image
             src={aboutUs.gridone.url}
@@ -95,8 +119,56 @@ export default function About({ aboutUs }) {
           </p>
           </div>
           <div className="flex items-center justify-center order-first md:order-last">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.extraContent.html }} className="pb-12 md:pl-12" />
+            <div dangerouslySetInnerHTML={{ __html: aboutUs.content2.html }} className="pb-12 md:pl-12" />
           </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
+        <div className="flex items-center justify-center">
+            <div dangerouslySetInnerHTML={{ __html: aboutUs.content3.html }} className="pb-12 md:pr-12" />
+        </div>
+        <div className="p-0 md:p-12 my-auto">
+          <Image
+            src={aboutUs.gridthree.url}
+            width={aboutUs.gridthree.width}
+            height={aboutUs.gridthree.height}
+            layout="responsive"
+          />
+          <p className="text-center p-5 font-semibold bg-black text-white">
+          Andrew Pietkiewicz, Paul Birley, Barry Dickson, Jonathan Haughton, Ken Massey, Leon Schofield, Scott Mckenna stood up
+          Stephen Massey and John Mather on the ground
+          </p>
+        </div> 
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
+        <div className="p-0 md:p-12 my-auto">
+          <div className="pb-5">
+          <Image
+            src={aboutUs.gridfour.url}
+            width={aboutUs.gridfour.width}
+            height={aboutUs.gridfour.height}
+            layout="responsive"
+          />
+          </div>
+          <div className="pt-5">
+          <Image
+            src={aboutUs.gridfive.url}
+            width={aboutUs.gridfive.width}
+            height={aboutUs.gridfive.height}
+            layout="responsive"
+          />
+          </div>
+          <p className="text-center p-5 font-semibold bg-black text-white">
+          Some early success. Look what can be achieved when players and coaches work together.
+          </p>
+          </div>
+          <div className="flex items-center justify-center order-first md:order-last">
+            <div dangerouslySetInnerHTML={{ __html: aboutUs.content4.html }} className="pb-12 md:pl-12" />
+          </div>
+      </div>
+    </Container>
+    <Container>
+      <div className="mx-auto text-center">
+        <div dangerouslySetInnerHTML={{ __html: aboutUs.content5.html }} className="pb-12 md:pl-12" />
       </div>
     </Container>
     </Layout>

@@ -6,12 +6,12 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'hero-bg': "url('/images/hero-image.webp')",
-        'teams-bg': "url('/images/teams.jpg')",
-        'disablity-bg': "url('/images/disablity.jpg')",
-        'adultfun-bg': "url('/images/adultfun.jpg')",
-        'steppers-bg': "url('/images/steppers.jpg')",
-        'community-bg': "url('/images/community.jpg')",
-        'voluntaryjobs-bg': "url('/images/voluntaryjobs.jpg')",
+        'teams-bg': "url('/images/teams.webp')",
+        'disablity-bg': "url('/images/disablity.webp')",
+        'adultfun-bg': "url('/images/adultfun.webp')",
+        'steppers-bg': "url('/images/steppers.webp')",
+        'community-bg': "url('/images/community.webp')",
+        'voluntaryjobs-bg': "url('/images/voluntaryjobs.webp')",
        }),
        colors: {
         white: '#fff',
