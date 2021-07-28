@@ -67,23 +67,33 @@ export default function About({ aboutUs }) {
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
       <div className="flex items-center justify-center">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
-          </div>
-          
-            <Image
-              src={aboutUs.gridone.url}
-              width={aboutUs.gridone.width}
-              height={aboutUs.gridone.height}
-              layout="responsive"
-            />
+          <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
+      </div>
+        <div className="p-0 md:p-12 my-auto">
+          <Image
+            src={aboutUs.gridone.url}
+            width={aboutUs.gridone.width}
+            height={aboutUs.gridone.height}
+            layout="responsive"
+          />
+          <p className="text-center p-5 font-semibold bg-black text-white">
+            Top Left: Jonathan Broughton, Andy Weaver, Billy Clynes, Darren Sutcliffe, David McCann, Jason Bowes
+            Front Left: Not Sure, David O’Neill, Ross Wild, Phil Wakeman, Martin Taylor.
+          </p>
+        </div> 
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
-      <Image
+        <div className="p-0 md:p-12 my-auto">
+          <Image
             src={aboutUs.gridtwo.url}
             width={aboutUs.gridtwo.width}
             height={aboutUs.gridtwo.height}
             layout="responsive"
           />
+          <p className="text-center p-5 font-semibold bg-black text-white">
+            The above picture was a club fun day with Jack Halliwell and his oringinal team meeting up for one final game together.
+          </p>
+          </div>
           <div className="flex items-center justify-center order-first md:order-last">
             <div dangerouslySetInnerHTML={{ __html: aboutUs.extraContent.html }} className="pb-12 md:pl-12" />
           </div>

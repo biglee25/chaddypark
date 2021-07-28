@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'hero-bg': "url('/images/hero-image.jpg')",
+        'hero-bg': "url('/images/hero-image.webp')",
         'teams-bg': "url('/images/teams.jpg')",
         'disablity-bg': "url('/images/disablity.jpg')",
         'adultfun-bg': "url('/images/adultfun.jpg')",

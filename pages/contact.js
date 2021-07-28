@@ -51,8 +51,8 @@ export default function Contacts({ contacts }) {
                   className="rounded-full"
                 />
               </div>
-                <h2 className="mb-5 bg-primaryyellow shadow-md py-5 mx-4">{contact.name}</h2>
-                <p className="font-bold pb-5">{contact.title}</p>
+                <h2 className=" bg-primaryyellow text-black rounded-t-lg shadow-md py-5">{contact.name}</h2>
+                <h2 className="font-bold pb-5">{contact.title}</h2>
                 <p className="pb-5">{contact.telephone}</p>
                 <div className="flex items-center justify-center">
                   <div dangerouslySetInnerHTML={{ __html: contact.email.html }} />
