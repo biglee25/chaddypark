@@ -8,13 +8,6 @@ import Head from 'next/head'
 
 import Card from '../components/card'
 
-// The following import prevents a Font Awesome icon server-side rendering bug,
-// where the icons flash from a very large icon down to a properly sized one:
-import '@fortawesome/fontawesome-svg-core/styles.css';
-// Prevent fontawesome from adding its CSS since we did it manually above:
-import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false; /* eslint-disable import/first */
-
 
 export default function Index({ posts, preview }) {
   const heroPost = posts[0]
@@ -29,13 +22,7 @@ export default function Index({ posts, preview }) {
         <Container>
           <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
           <div className="block md:flex">
-            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s"
-                    className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"
-                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Y0OlBZFxX8s?autoplay=1><img src=https://i.ytimg.com/vi_webp/Y0OlBZFxX8s/sddefault.webp alt='The FA Grassroots National Club of the Year 2019'><span>▶</span></a>"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    title="The FA Grassroots National Club of the Year 2019">
+            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s" className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2" loading="lazy">
             </iframe>
             <iframe src="https://www.youtube.com/embed/7UMsvMITjg4A"
                     className="w-full md:w-8/12 rounded-b-lg h-96 mx-auto p-2"

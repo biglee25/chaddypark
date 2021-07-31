@@ -3,9 +3,7 @@ import { useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import Hamburger from 'hamburger-react'
 
 export default function Navbar({ fixed }) {
 
@@ -27,8 +25,8 @@ export default function Navbar({ fixed }) {
               <div className="font-black">Chadderton Park<br />Sports Club</div>
               </a>
               </Link>
-              <button className="text-black cursor-pointer px-3 py-1 flex items-center lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" type="button">
-               <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setExpanded(!expanded)} />
+              <button onClick={() => setExpanded(!expanded)} className="text-black cursor-pointer px-3 py-1 flex items-center lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" type="button">
+                <Hamburger toggled={expanded} toggle={setExpanded} />
               </button>
               </div>
             <div

@@ -168,7 +168,9 @@ export default function About({ aboutUs }) {
     </Container>
     <Container>
       <div className="mx-auto text-center bg-gray-700 text-white pt-12 px-12">
-        <h1>Our Achievments at a glance</h1>
+        <div className="bg-white text-gray-700">
+          <h1 className="py-12">Our Past Achievments</h1>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: aboutUs.content5.html }} className="py-12 px-5 md:pl-12" />
       </div>
     </Container>

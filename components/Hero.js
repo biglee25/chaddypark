@@ -17,11 +17,10 @@ export default function Hero() {
                 </div>
                 <div className="p-12 mx-auto hidden md:block">
                 <Image
-                  src="/images/queens-award.jpg"
+                  src="/images/queens-award.png"
                   alt="Queens Award for Voluntary Service"
-                  width={350}
-                  height={250}
-                  className="bg-white opacity-90 rounded-lg"
+                  width={250}
+                  height={300}
                 />
                 </div>
             </div>
