@@ -30,6 +30,7 @@ export default function Index({ posts, preview }) {
                     allowfullscreen
                     title="The FA Grassroots National Club of the Year 2019"
                     loading="lazy"
+                    Cache-Control="max-age=31536000"
                     >
             </iframe>
             <iframe src="https://www.youtube.com/embed/7UMsvMITjg4"
@@ -40,6 +41,7 @@ export default function Index({ posts, preview }) {
                     allowfullscreen
                     title="Cerebral Palsy Football"
                     loading="lazy"
+                    Cache-Control="max-age=31536000"
                     >
             </iframe>
           </div>
