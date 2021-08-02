@@ -27,6 +27,17 @@ export default function Card ( {children} ) {
                     </a>
                 </Link>
             </div>
+            <div className="bg-netball-bg bg-center bg-cover bg-no-repeat col-start-1 md:col-start-1 col-span-2 md:col-span-2">
+                <Link href="/teams">
+                    <a>
+                    <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
+                        <div className="w-full font-bold text-white">
+                            <h2 className="bg-black bg-opacity-60">Netball Teams</h2>
+                        </div>
+                    </div>
+                    </a>
+                </Link>
+            </div>
             <div className="bg-adultfun-bg bg-center bg-cover bg-no-repeat col-start-1 md:col-start-1 col-span-2 md:col-span-1">
                 <Link href="/teams">
                     <a>
@@ -49,12 +60,23 @@ export default function Card ( {children} ) {
                     </a>
                 </Link>
             </div>
+            <div className="bg-awards-bg bg-center bg-cover bg-no-repeat">
+                <Link href="/teams">
+                    <a>
+                    <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
+                        <div className="w-full font-bold text-white">
+                            <h2 className="bg-black bg-opacity-60">Awards</h2>
+                        </div>
+                    </div>
+                    </a>
+                </Link>
+            </div>
             <div className="bg-voluntaryjobs-bg bg-center bg-cover bg-no-repeat col-start-1 md:col-start-1 col-span-2 md:col-span-1">
                 <Link href="/teams">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
                         <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Volutary Jobs Available</h2>
+                            <h2 className="bg-black bg-opacity-60">Volutary Jobs</h2>
                         </div>
                     </div>
                     </a>

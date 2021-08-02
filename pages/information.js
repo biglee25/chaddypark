@@ -19,6 +19,24 @@ export async function getStaticProps() {
           conduct {
             html
           }
+          protection {
+            html
+          }
+          equal {
+            html
+          }
+          complaints {
+            html
+          }
+          safety {
+            html
+          }
+          charter {
+            html
+          }
+          gdpr {
+            html
+          }
           }
         }
       
@@ -40,8 +58,8 @@ export default ({ information }) => (
     <Container>
        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none">Information</h1>
       <Tabs>
-        <TabList className="cursor-pointer text-center overflow-y-scroll my-12">
-          <div className="text-black flex flex-wrap">
+        <TabList className="cursor-pointer text-center overflow-y-scroll my-2 md:my-12">
+          <div className="text-black flex flex-wrap mb-2">
             <Tab className="bg-gray-300 py-1 px-2 m-1 rounded-lg active:bg-black">Constitution</Tab>
             <Tab className="bg-gray-300 py-1 px-2 m-1 rounded-lg">Code of Conduct</Tab>
             <Tab className="bg-gray-300 py-1 px-2 m-1 rounded-lg">Child Protection</Tab>
@@ -60,22 +78,22 @@ export default ({ information }) => (
           <div dangerouslySetInnerHTML={{ __html: information.conduct.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-
+          <div dangerouslySetInnerHTML={{ __html: information.protection.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 4</h2>
+          <div dangerouslySetInnerHTML={{ __html: information.equal.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 5</h2>
+          <div dangerouslySetInnerHTML={{ __html: information.complaints.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 6</h2>
+          <div dangerouslySetInnerHTML={{ __html: information.safety.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 7</h2>
+          <div dangerouslySetInnerHTML={{ __html: information.charter.html }} className="pb-12 md:pr-12" />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 8</h2>
+          <div dangerouslySetInnerHTML={{ __html: information.gdpr.html }} className="pb-12 md:pr-12" />
         </TabPanel>
       </Tabs>
 

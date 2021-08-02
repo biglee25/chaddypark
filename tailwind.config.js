@@ -8,9 +8,11 @@ module.exports = {
         'hero-bg': "url('/images/hero-image.webp')",
         'teams-bg': "url('/images/teams.webp')",
         'disablity-bg': "url('/images/disablity.webp')",
+        'netball-bg': "url('/images/netball.webp')",
         'adultfun-bg': "url('/images/adultfun.webp')",
         'steppers-bg': "url('/images/steppers.webp')",
         'community-bg': "url('/images/community.webp')",
+        'awards-bg': "url('/images/awards.webp')",
         'voluntaryjobs-bg': "url('/images/voluntaryjobs.webp')",
        }),
        colors: {
