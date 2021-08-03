@@ -8,10 +8,10 @@ import Layout from '../components/layout';
 export async function getStaticProps() {
   const graphcms = new GraphQLClient((process.env.GRAPHCMS_PROJECT_API))
   
-  const { aboutUs } = await graphcms.request(
+  const { page } = await graphcms.request(
     `
     query MyQuery {
-      aboutUs(where: {slug: "about"}) {
+      page(where: {slug: "about"}) {
         id
         title
         subtitle
@@ -20,15 +20,15 @@ export async function getStaticProps() {
           width
           height
         }
-        content {
+        content1 {
           html
         }
-        gridone {
+        image1 {
           url
           width
           height
         }
-        gridtwo {
+        image2 {
           url
           width
           height
@@ -39,17 +39,17 @@ export async function getStaticProps() {
         content3 {
           html
         }
-        gridthree {
+        image3 {
           url
           width
           height
         }
-        gridfour {
+        image4 {
           url
           width
           height
         }
-        gridfive {
+        image5 {
           url
           width
           height
@@ -70,34 +70,34 @@ export async function getStaticProps() {
 
   return {
     props: {
-      aboutUs
+      page
     },
   };
 }
 
-export default function About({ aboutUs }) {
+export default function About({ page }) {
   return (
     <Layout>
     <Container>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none">{aboutUs.title}</h1>
-          <h2>{aboutUs.subtitle}</h2>
-            <Image
-              src={aboutUs.heroImage.url}
-              width={aboutUs.heroImage.width}
-              height={aboutUs.heroImage.height}
-              layout="responsive"
-            />
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none">{page.title}</h1>
+        <h2>{page.subtitle}</h2>
+          <Image
+            src={page.heroImage.url}
+            width={page.heroImage.width}
+            height={page.heroImage.height}
+            layout="responsive"
+          />
     </Container>
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
         <div className="flex items-center justify-center">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.content.html }} className="pb-12 md:pr-12" />
+            <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="pb-12 md:pr-12" />
         </div>
         <div className="p-0 md:p-12 my-auto">
           <Image
-            src={aboutUs.gridone.url}
-            width={aboutUs.gridone.width}
-            height={aboutUs.gridone.height}
+            src={page.image1.url}
+            width={page.image1.width}
+            height={page.image1.height}
             layout="responsive"
           />
           <p className="text-center p-5 font-semibold bg-black text-white">
@@ -109,9 +109,9 @@ export default function About({ aboutUs }) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
         <div className="p-0 md:p-12 my-auto">
           <Image
-            src={aboutUs.gridtwo.url}
-            width={aboutUs.gridtwo.width}
-            height={aboutUs.gridtwo.height}
+            src={page.image2.url}
+            width={page.image2.width}
+            height={page.image2.height}
             layout="responsive"
           />
           <p className="text-center p-5 font-semibold bg-black text-white">
@@ -119,18 +119,18 @@ export default function About({ aboutUs }) {
           </p>
           </div>
           <div className="flex items-center justify-center order-first md:order-last">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.content2.html }} className="pb-12 md:pl-12" />
+            <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="pb-12 md:pl-12" />
           </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12">
         <div className="flex items-center justify-center">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.content3.html }} className="pb-12 md:pr-12" />
+            <div dangerouslySetInnerHTML={{ __html: page.content3.html }} className="pb-12 md:pr-12" />
         </div>
         <div className="p-0 md:p-12 my-auto">
           <Image
-            src={aboutUs.gridthree.url}
-            width={aboutUs.gridthree.width}
-            height={aboutUs.gridthree.height}
+            src={page.image3.url}
+            width={page.image3.width}
+            height={page.image3.height}
             layout="responsive"
           />
           <p className="text-center p-5 font-semibold bg-black text-white">
@@ -142,36 +142,36 @@ export default function About({ aboutUs }) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 md:py-12 order-last md:order-first">
         <div className="p-0 md:p-12 my-auto">
           <div className="pb-5">
-          <Image
-            src={aboutUs.gridfour.url}
-            width={aboutUs.gridfour.width}
-            height={aboutUs.gridfour.height}
-            layout="responsive"
-          />
+            <Image
+              src={page.image4.url}
+              width={page.image4.width}
+              height={page.image4.height}
+              layout="responsive"
+            />
           </div>
           <div className="pt-5">
-          <Image
-            src={aboutUs.gridfive.url}
-            width={aboutUs.gridfive.width}
-            height={aboutUs.gridfive.height}
-            layout="responsive"
-          />
+            <Image
+              src={page.image5.url}
+              width={page.image5.width}
+              height={page.image5.height}
+              layout="responsive"
+            />
           </div>
           <p className="text-center p-5 font-semibold bg-black text-white">
           Some early success. Look what can be achieved when players and coaches work together.
           </p>
           </div>
           <div className="flex items-center justify-center order-first md:order-last">
-            <div dangerouslySetInnerHTML={{ __html: aboutUs.content4.html }} className="pb-12 md:pl-12" />
+            <div dangerouslySetInnerHTML={{ __html: page.content4.html }} className="pb-12 md:pl-12" />
           </div>
       </div>
     </Container>
     <Container>
-      <div className="mx-auto text-center bg-gray-700 text-white pt-12 px-12">
+      <div className="mx-auto text-center bg-gray-700 text-white pt-12 px-5 md:px-12">
         <div className="bg-white text-gray-700">
-          <h1 className="py-12">Our Past Achievments</h1>
+          <h1 className="px-2 py-12">Our Past Achievments</h1>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: aboutUs.content5.html }} className="py-12 px-5 md:pl-12" />
+        <div dangerouslySetInnerHTML={{ __html: page.content5.html }} className="py-12 md:px-5 md:pl-12" />
       </div>
     </Container>
     </Layout>
