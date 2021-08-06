@@ -11,7 +11,7 @@ export async function getStaticProps() {
   const { page } = await graphcms.request(
     `
     query MyQuery {
-        page(where: {slug: "netball"}) {
+        page(where: {slug: "adult"}) {
           id
           title
           subtitle
@@ -22,49 +22,6 @@ export async function getStaticProps() {
           }
           content1 {
             html
-          }
-          image1 {
-            url
-            width
-            height
-          }
-          image2 {
-            url
-            width
-            height
-          }
-          content2 {
-            html
-          }
-          content3 {
-            html
-          }
-          image3 {
-            url
-            width
-            height
-          }
-          image4 {
-            url
-            width
-            height
-          }
-          image5 {
-            url
-            width
-            height
-          }
-          content4 {
-            html
-          }
-          content5 {
-            html
-          }
-          teamTitle1
-          teamImage1 {
-              url
-              width
-              height
           }
           profileImage1 {
             width
@@ -117,18 +74,7 @@ export default ({ page }) => (
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
     </div>
-    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-            <h2 className="text-center bg-black p-2 text-white">{page.teamTitle1}</h2>
-            <Image
-                src={page.teamImage1.url}
-                width={page.teamImage1.width}
-                height={page.teamImage1.height}
-                layout="responsive"
-            />
-        </div>
-    </div> */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
             <Image
                 src={page.image1.url}
@@ -157,8 +103,20 @@ export default ({ page }) => (
             height={page.image4.height}
             layout="responsive"
         />
-      </div>
-      <h1 className="text-center pb-5 md:pb-12">Netball Coaches</h1>
+        <Image
+            src={page.image5.url}
+            width={page.image5.width}
+            height={page.image5.height}
+            layout="responsive"
+        />
+        <Image
+            src={page.image6.url}
+            width={page.image6.width}
+            height={page.image6.height}
+            layout="responsive"
+        />
+      </div> */}
+      <h1 className="text-center pb-5 md:pb-12">Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: page.profile1.html }} className="m-auto py-12 text-black" />

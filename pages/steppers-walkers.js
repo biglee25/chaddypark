@@ -11,79 +11,93 @@ export async function getStaticProps() {
   const { page } = await graphcms.request(
     `
     query MyQuery {
-        page(where: {slug: "netball"}) {
-          id
-          title
-          subtitle
-          heroImage {
+      page(where: {slug: "steppers"}) {
+        id
+        title
+        subtitle
+        heroImage {
+          url
+          width
+          height
+        }
+        content1 {
+          html
+        }
+        image1 {
+          url
+          width
+          height
+        }
+        image2 {
+          url
+          width
+          height
+        }
+        content2 {
+          html
+        }
+        content3 {
+          html
+        }
+        image3 {
+          url
+          width
+          height
+        }
+        image4 {
+          url
+          width
+          height
+        }
+        image5 {
+          url
+          width
+          height
+        }
+        image6 {
+          url
+          width
+          height
+        }
+        content4 {
+          html
+        }
+        content5 {
+          html
+        }
+        teamTitle1
+        teamImage1 {
             url
             width
             height
-          }
-          content1 {
-            html
-          }
-          image1 {
-            url
-            width
-            height
-          }
-          image2 {
-            url
-            width
-            height
-          }
-          content2 {
-            html
-          }
-          content3 {
-            html
-          }
-          image3 {
-            url
-            width
-            height
-          }
-          image4 {
-            url
-            width
-            height
-          }
-          image5 {
-            url
-            width
-            height
-          }
-          content4 {
-            html
-          }
-          content5 {
-            html
-          }
-          teamTitle1
-          teamImage1 {
-              url
-              width
-              height
-          }
-          profileImage1 {
-            width
-            url
-            height
-          }
-          profile1 {
-            html
-          }
-          profileImage2 {
-            width
-            url
-            height
-          }
-          profile2 {
-            html
-          }
+        }
+        profileImage1 {
+          width
+          url
+          height
+        }
+        profile1 {
+          html
+        }
+        profileImage2 {
+          width
+          url
+          height
+        }
+        profile2 {
+          html
+        }
+        profileImage3 {
+          width
+          url
+          height
+        }
+        profile3 {
+          html
         }
       }
+    }
+
       
     
         
@@ -117,17 +131,6 @@ export default ({ page }) => (
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
     </div>
-    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-            <h2 className="text-center bg-black p-2 text-white">{page.teamTitle1}</h2>
-            <Image
-                src={page.teamImage1.url}
-                width={page.teamImage1.width}
-                height={page.teamImage1.height}
-                layout="responsive"
-            />
-        </div>
-    </div> */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
             <Image
@@ -157,8 +160,20 @@ export default ({ page }) => (
             height={page.image4.height}
             layout="responsive"
         />
+        <Image
+            src={page.image5.url}
+            width={page.image5.width}
+            height={page.image5.height}
+            layout="responsive"
+        />
+        <Image
+            src={page.image6.url}
+            width={page.image6.width}
+            height={page.image6.height}
+            layout="responsive"
+        />
       </div>
-      <h1 className="text-center pb-5 md:pb-12">Netball Coaches</h1>
+      <h1 className="text-center pb-5 md:pb-12">Contacts</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: page.profile1.html }} className="m-auto py-12 text-black" />
@@ -178,6 +193,16 @@ export default ({ page }) => (
             src={page.profileImage2.url}
             width={page.profileImage2.width}
             height={page.profileImage2.height}
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: page.profile3.html }} className="m-auto py-12 text-black" />
+        </div>
+        <div className="my-auto">
+        <Image
+            src={page.profileImage3.url}
+            width={page.profileImage3.width}
+            height={page.profileImage3.height}
           />
         </div>
     </div>
