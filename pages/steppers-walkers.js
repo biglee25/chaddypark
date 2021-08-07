@@ -95,6 +95,7 @@ export async function getStaticProps() {
         profile3 {
           html
         }
+        title1
       }
     }
 
@@ -127,6 +128,7 @@ export default ({ page }) => (
             height={page.heroImage.height}
             layout="responsive"
           />
+          <h1 className="text-black">{page.title1}</h1>
         <div className="bg-primaryyellow my-12 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
