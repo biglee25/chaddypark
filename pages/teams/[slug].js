@@ -17,6 +17,9 @@ export async function getStaticProps({ params }) {
         slug
         title
         heading
+        sponsor {
+          html
+        }
         content {
           html
         }
@@ -32,6 +35,30 @@ export async function getStaticProps({ params }) {
           height
           url
           width
+        }
+        profile1 {
+            html
+        }
+        profile2 {
+            html
+        }
+        profile3 {
+            html
+        }
+        profile4 {
+            html
+        }
+        profile5 {
+            html
+        }
+        profile6 {
+            html
+        }
+        profile7 {
+            html
+        }
+        profile8 {
+            html
         }
         gallery1 {
           url
@@ -74,6 +101,9 @@ export async function getStaticPaths() {
       teams {
         slug
         title
+        sponsor {
+          html
+        }
         heading
         content {
           html
@@ -90,6 +120,30 @@ export async function getStaticPaths() {
           height
           url
           width
+        }
+        profile1 {
+            html
+        }
+        profile2 {
+            html
+        }
+        profile3 {
+            html
+        }
+        profile4 {
+            html
+        }
+        profile5 {
+            html
+        }
+        profile6 {
+            html
+        }
+        profile7 {
+            html
+        }
+        profile8 {
+            html
         }
         gallery1 {
             url
@@ -143,50 +197,70 @@ export default ({ team }) => (
           <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
           </div>
       </div>
+      <h1 className="text-center pb-12">{team.title} Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto pt-12 text-black" />
         </div>
         <div>
-        <Image
-            src={team.profileImage.url}
-            width={team.profileImage.width}
-            height={team.profileImage.height}
+        <img
+            src={team.profileImage?.url}
+            width={team.profileImage?.width}
+            height={team.profileImage?.height}
+            className="m-auto pt-12 text-black flex flex-col items-center justify-center"
           />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile1?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile2?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile3?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile4?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile5?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile6?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile7?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: team.profile8?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
-        <Image
-        src={team.gallery1.url}
-        width={team.gallery1.width}
-        height={team.gallery1.height}
-        layout="responsive"
+        <img
+        src={team.gallery1?.url}
+        width={team.gallery1?.width}
+        height={team.gallery1?.height}
 
         />
-        <Image
-        src={team.gallery2.url}
-        width={team.gallery2.width}
-        height={team.gallery2.height}
-        layout="responsive"
+        <img
+        src={team.gallery2?.url}
+        width={team.gallery2?.width}
+        height={team.gallery2?.height}
         />
-        <Image
-        src={team.gallery3.url}
-        width={team.gallery3.width}
-        height={team.gallery3.height}
-        layout="responsive"
+        <img
+        src={team.gallery3?.url}
+        width={team.gallery3?.width}
+        height={team.gallery3?.height}
         />
-        <Image
-        src={team.gallery4.url}
-        width={team.gallery4.width}
-        height={team.gallery4.height}
-        layout="responsive"
+        <img
+        src={team.gallery4?.url}
+        width={team.gallery4?.width}
+        height={team.gallery4?.height}
         />
-
-
       </div>
-      <div className="flex items-center justify-center">
-          <div dangerouslySetInnerHTML={{ __html: team.image.html }} className="m-auto pt-12 text-black" />
-        </div>
+      <div>
+        <div dangerouslySetInnerHTML={{ __html: team.sponsor?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+      </div>
     </Container>
     <div className="w-full m-auto text-center mt-12">
     <Link href="/teams" className="text-black">
