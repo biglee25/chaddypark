@@ -12,7 +12,7 @@ export default function Footer() {
           <h4>
             Affiliation No..W-Man2950 | Club ID 66741
           </h4>
-          <div className="bg-black p-5 text-white flex flex-col justify-center items-center lg:pl-4  mt-12">
+          <div className="text-black hover:text-gray-700 flex flex-col justify-center items-center lg:pl-4  mt-12">
             <a href="https://invadedbypixels.com">Website by Invaded by Pixels</a>
           </div>
         </div>

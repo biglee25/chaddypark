@@ -264,7 +264,7 @@ export default ({ team }) => (
     </Container>
     <div className="w-full m-auto text-center mt-12">
     <Link href="/teams" className="text-black">
-      <button className="bg-primaryyellow hover:bg-yellow-400 w-full md:w-56 px-24 md:px-12 py-5">
+      <button className="bg-gray-800 text-white hover:bg-gray-600 w-full md:w-56 px-24 md:px-12 py-5">
         Back to Teams
       </button>
       </Link>
