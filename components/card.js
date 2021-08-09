@@ -72,7 +72,7 @@ export default function Card ( {children} ) {
                 </Link>
             </div>
             <div className="bg-community-bg bg-top bg-cover bg-no-repeat col-start-1 md:col-start-2 col-span-2">
-                <Link href="/teams">
+                <Link href="/community">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
                         <div className="w-full font-bold text-white">
