@@ -208,10 +208,10 @@ export default ({ page }) => (
         </div>
         <div className="my-auto py-2">
         <Image
-            src={page.profileImage2.url}
-            width={page.profileImage2.width}
-            height={page.profileImage2.height}
-          />
+          src={page.profileImage2.url}
+          width={page.profileImage2.width}
+          height={page.profileImage2.height}
+        />
         </div>
     </div>
 

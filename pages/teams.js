@@ -43,12 +43,12 @@ export default function Teams({ teams }) {
               <a>
               <div className="shadow-xl flex flex-col justify-between min-h-full">
                 <div className="py-5 bg-primaryyellow hover:bg-black text-black hover:text-white" key={team.id}>
-                      {team.title}
+                  {team.title}
                 </div>
                 <Image
                   src={team.image.url}
                   width={team.image.width}
-                  height={team.image.height}
+                  height="450px"
                 />
               </div>
               </a>

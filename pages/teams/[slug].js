@@ -39,26 +39,66 @@ export async function getStaticProps({ params }) {
         profile1 {
             html
         }
+        profileImage1 {
+          height
+          url
+          width
+        }
         profile2 {
             html
+        }
+        profileImage2 {
+          height
+          url
+          width
         }
         profile3 {
             html
         }
+        profileImage3 {
+          height
+          url
+          width
+        }
         profile4 {
             html
+        }
+        profileImage4 {
+          height
+          url
+          width
         }
         profile5 {
             html
         }
+        profileImage5 {
+          height
+          url
+          width
+        }
         profile6 {
             html
+        }
+        profileImage6 {
+          height
+          url
+          width
         }
         profile7 {
             html
         }
+        profileImage7 {
+          height
+          url
+          width
+        }
         profile8 {
             html
+        }
+        profileImage8 {
+          height
+          url
+          width
         }
         gallery1 {
           url
@@ -114,7 +154,7 @@ export async function getStaticPaths() {
           width
         }
         profile {
-            html
+          html
         }
         profileImage {
           height
@@ -124,48 +164,88 @@ export async function getStaticPaths() {
         profile1 {
             html
         }
+        profileImage1 {
+          height
+          url
+          width
+        }
         profile2 {
             html
+        }
+        profileImage2 {
+          height
+          url
+          width
         }
         profile3 {
             html
         }
+        profileImage3 {
+          height
+          url
+          width
+        }
         profile4 {
             html
+        }
+        profileImage4 {
+          height
+          url
+          width
         }
         profile5 {
             html
         }
+        profileImage5 {
+          height
+          url
+          width
+        }
         profile6 {
             html
+        }
+        profileImage6 {
+          height
+          url
+          width
         }
         profile7 {
             html
         }
+        profileImage7 {
+          height
+          url
+          width
+        }
         profile8 {
             html
         }
-        gallery1 {
-            url
-            width
-            height
-        } 
-        gallery2 {
-            url
-            width
-            height
-        } 
-        gallery3 {
-            url
-            width
-            height
-        } 
-        gallery4 {
-            url
-            width
-            height
+        profileImage8 {
+          height
+          url
+          width
         }
-      }
+        gallery1 {
+          url
+          width
+          height
+      } 
+      gallery2 {
+          url
+          width
+          height
+      } 
+      gallery3 {
+          url
+          width
+          height
+      } 
+      gallery4 {
+          url
+          width
+          height
+      } 
+    }
     }
   `);
 
@@ -198,41 +278,89 @@ export default ({ team }) => (
           </div>
       </div>
       <h1 className="text-center pb-12">{team.title} Coaches</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-5 md:py-12 rounded-lg">
         <div className="flex items-center justify-center">
-          <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto pt-12 text-black" />
+          <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto text-black" />
         </div>
-        <div>
         <img
             src={team.profileImage?.url}
             width={team.profileImage?.width}
             height={team.profileImage?.height}
-            className="m-auto pt-12 text-black flex flex-col items-center justify-center"
+            className="m-auto text-black flex flex-col items-center justify-center"
           />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile1?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile1?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage1?.url}
+            width={team.profileImage1?.width}
+            height={team.profileImage1?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile2?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile2?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage2?.url}
+            width={team.profileImage2?.width}
+            height={team.profileImage2?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile3?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile3?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage3?.url}
+            width={team.profileImage3?.width}
+            height={team.profileImage3?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile4?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile4?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage4?.url}
+            width={team.profileImage4?.width}
+            height={team.profileImage4?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile5?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile5?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage5?.url}
+            width={team.profileImage5?.width}
+            height={team.profileImage5?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile6?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile6?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage6?.url}
+            width={team.profileImage6?.width}
+            height={team.profileImage6?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile7?.html }} className="m-auto text-black" />
         </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile7?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
+        <img
+            src={team.profileImage7?.url}
+            width={team.profileImage7?.width}
+            height={team.profileImage7?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
+        <div className="flex items-center justify-center">
+          <div dangerouslySetInnerHTML={{ __html: team.profile8?.html }} className="m-auto text-black" />
         </div>
+        <img
+            src={team.profileImage8?.url}
+            width={team.profileImage8?.width}
+            height={team.profileImage8?.height}
+            className="m-auto text-black flex flex-col items-center justify-center"
+          />
         <div>
-          <div dangerouslySetInnerHTML={{ __html: team.profile8?.html }} className="m-auto text-black flex flex-col items-center justify-center" />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
