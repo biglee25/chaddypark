@@ -127,13 +127,12 @@ export default ({ page }) => (
           <h1>{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
-        <Image
+        <img
             src={page.heroImage.url}
-            width={page.heroImage.width}
+            width="100%"
             height={page.heroImage.height}
             layout="responsive"
           />
-          <h1 className="text-black">{page.title1}</h1>
         <div className="bg-primaryyellow my-12 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
@@ -141,27 +140,27 @@ export default ({ page }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
           <h2 className="text-center bg-black p-2 text-white">{page.title1}</h2>
-            <Image
+            <img
                 src={page.image1.url}
-                width={page.image1.width}
+                width="100%"
                 height={page.image1.height}
                 layout="responsive"
             />
           </div>
           <div>
           <h2 className="text-center bg-black p-2 text-white">{page.title2}</h2>
-            <Image
+            <img
                 src={page.image2.url}
-                width={page.image2.width}
+                width="100%"
                 height={page.image2.height}
                 layout="responsive"
             />
           </div>
           <div>
           <h2 className="text-center bg-black p-2 text-white">{page.title3}</h2>
-            <Image
+            <img
               src={page.image3.url}
-              width={page.image3.width}
+              width="100%"
               height={page.image3.height}
               layout="responsive"
             />
@@ -170,7 +169,7 @@ export default ({ page }) => (
           <h2 className="text-center bg-black p-2 text-white">{page.title4}</h2>
             <img
               src={page.image4.url}
-              width={page.image4.width}
+              width="100%"
               height={page.image4.height}
             />
           </div>
@@ -178,7 +177,7 @@ export default ({ page }) => (
           <h2 className="text-center bg-black p-2 text-white">{page.title5}</h2>
             <img
               src={page.image5.url}
-              width={page.image5.width}
+              width="100%"
               height={page.image5.height}
             />
           </div>
@@ -186,7 +185,7 @@ export default ({ page }) => (
           <h2 className="text-center bg-black p-2 text-white">{page.title6}</h2>
             <img
               src={page.image6.url}
-              width={page.image6.width}
+              width="100%"
               height={page.image6.height}
             />
           </div>
@@ -196,8 +195,8 @@ export default ({ page }) => (
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: page.profile1.html }} className="m-auto py-12 text-black" />
         </div>
-        <div className="my-auto py-2">
-        <Image
+        <div className="m-auto py-2">
+        <img
             src={page.profileImage1.url}
             width={page.profileImage1.width}
             height={page.profileImage1.height}
@@ -206,8 +205,8 @@ export default ({ page }) => (
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: page.profile2.html }} className="m-auto py-12 text-black" />
         </div>
-        <div className="my-auto py-2">
-        <Image
+        <div className="m-auto py-2">
+        <img
           src={page.profileImage2.url}
           width={page.profileImage2.width}
           height={page.profileImage2.height}

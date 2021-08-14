@@ -280,7 +280,7 @@ export default ({ team }) => (
       <h1 className="text-center pb-12">{team.title} Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-5 md:py-12 rounded-lg">
         <div className="flex items-center justify-center">
-          <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto text-black" />
+          <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto md:mr-auto text-black" />
         </div>
         <img
             src={team.profileImage?.url}
@@ -368,7 +368,6 @@ export default ({ team }) => (
         src={team.gallery1?.url}
         width={team.gallery1?.width}
         height={team.gallery1?.height}
-
         />
         <img
         src={team.gallery2?.url}
