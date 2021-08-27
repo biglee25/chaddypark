@@ -1,7 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import Container from '../components/container';
 
-import Link from 'next/link'
+import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/layout';
 
@@ -105,6 +105,14 @@ export async function getStaticProps() {
 
 
 export default ({ page }) => (
+  <>
+  <Head>
+    <title>Chadderton Park FC Cerebral Palsy Football - Chaddy Park - Chaddy Fold</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content="Chadderton Park Football Club, Chadderton, Chaddy Park Oldham, junior soccer chaddy fold, boundary park, clayton playing fields, manchester FA, charter standard club of the year"/>
+    <meta name="keywords" content="chadderton, chaddy park football, soccer club, standard charter, charter standard, boundary park, clayton playing fields, oldham athletic, mini soccer, rochdale, league, bury league, junior football"/>
+    <meta name="keywords" content="Cerebral Palsy Football, disablity"/>
+  </Head>
   <Layout>
     <Container>
       <div className="text-center">
@@ -122,17 +130,6 @@ export default ({ page }) => (
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
     </div>
-    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-            <h2 className="text-center bg-black p-2 text-white">{page.teamTitle1}</h2>
-            <Image
-                src={page.teamImage1.url}
-                width={page.teamImage1.width}
-                height={page.teamImage1.height}
-                layout="responsive"
-            />
-        </div>
-    </div> */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
             <Image
@@ -201,4 +198,5 @@ export default ({ page }) => (
 
     </Container>
   </Layout>
+  </>
 );

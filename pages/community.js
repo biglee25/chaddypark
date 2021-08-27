@@ -136,6 +136,9 @@ export default ({ page }) => (
         <div className="bg-primaryyellow my-12 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
+        <div className="bg-white my-12 rounded-lg p-5">
+            <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="text-center mx-auto py-12 flex flex-col items-center justify-center" />
+        </div>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
@@ -144,7 +147,6 @@ export default ({ page }) => (
                 src={page.image1.url}
                 width="100%"
                 height={page.image1.height}
-                layout="responsive"
             />
           </div>
           <div>
@@ -153,7 +155,6 @@ export default ({ page }) => (
                 src={page.image2.url}
                 width="100%"
                 height={page.image2.height}
-                layout="responsive"
             />
           </div>
           <div>
@@ -162,7 +163,6 @@ export default ({ page }) => (
               src={page.image3.url}
               width="100%"
               height={page.image3.height}
-              layout="responsive"
             />
           </div>
           <div>

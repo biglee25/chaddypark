@@ -14,11 +14,14 @@ export default function Index({ posts, preview }) {
   const morePosts = posts.slice(1)
   return (
     <>
+      <Head>
+        <title>Chadderton Park FC - Chaddy Park Football Club</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Chadderton Park Football Club, Chadderton, Chaddy Park Oldham, junior soccer chaddy fold, boundary park, clayton playing fields, manchester FA, charter standard club of the year"/>
+        <meta name="keywords" content="chadderton, chaddy park football, soccer club, standard charter, charter standard, boundary park, clayton playing fields, oldham athletic, mini soccer, rochdale, league, bury league, junior football"/>
+      </Head>
       <Hero/>
       <Layout preview={preview}>
-        <Head>
-          <title>Chadderton Park Sports Club</title>
-        </Head>
         <Container>
           <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
           <div className="block md:flex">

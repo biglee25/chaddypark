@@ -115,6 +115,14 @@ export async function getStaticProps() {
 
 
 export default ({ page }) => (
+  <>
+  <Head>
+  <title>Chadderton Park FC Steppers Promoting Mental Health Awareness</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content="Chadderton Park Football Club, Chadderton, Chaddy Park Oldham, junior soccer chaddy fold, boundary park, clayton playing fields, manchester FA, charter standard club of the year"/>
+    <meta name="keywords" content="chadderton, chaddy park football, soccer club, standard charter, charter standard, boundary park, clayton playing fields, oldham athletic, mini soccer, rochdale, league, bury league, junior football"/>
+    <meta name="keywords" content="Mental Health Awareness, steppers, walking, walkers"/>
+  </Head>
   <Layout>
     <Container>
       <div className="text-center">
@@ -211,4 +219,5 @@ export default ({ page }) => (
 
     </Container>
   </Layout>
+  </>
 );
