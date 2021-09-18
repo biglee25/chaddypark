@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 
+import Image from 'next/image'
+
 import Card from '../components/card'
 
 
@@ -14,13 +16,24 @@ export default function Index({ posts, preview }) {
   const morePosts = posts.slice(1)
   return (
     <>
+      <Head>
+        <title>Chadderton Park FC - Chaddy Park Football Club</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Chadderton Park Football Club, Chadderton, Chaddy Park Oldham, junior soccer chaddy fold, boundary park, clayton playing fields, manchester FA, charter standard club of the year"/>
+        <meta name="keywords" content="chadderton, chaddy park football, soccer club, standard charter, charter standard, boundary park, clayton playing fields, oldham athletic, mini soccer, rochdale, league, bury league, junior football"/>
+      </Head>
       <Hero/>
       <Layout preview={preview}>
-        <Head>
-          <title>Chadderton Park Sports Club</title>
-        </Head>
         <Container>
-          <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
+          <div className="text-center my-12">
+          <Image
+                  src="/images/fa-logo.svg"
+                  alt="FA Grassroots"
+                  width={100}
+                  height={100}
+                />
+          <h1 className="text-4xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
+          </div>
           <div className="block md:flex">
             <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s"
                     className="w-full md:w-8/12 rounded-b-lg h-72 md:h-96 mx-auto md:p-2"
