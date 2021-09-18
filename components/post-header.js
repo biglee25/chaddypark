@@ -1,9 +1,8 @@
-import Avatar from '../components/avatar'
 import Date from '../components/date'
 import CoverImage from '../components/cover-image'
 import PostTitle from '../components/post-title'
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, coverImage, date }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -14,9 +13,6 @@ export default function PostHeader({ title, coverImage, date, author }) {
         <CoverImage title={title} url={coverImage.url} />
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="block mb-6 md:hidden">
-          <Avatar name={author.name} picture={author.picture.url} />
-        </div>
         <div className="mb-6 text-lg">
           <Date dateString={date} />
         </div>
