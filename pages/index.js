@@ -26,35 +26,23 @@ export default function Index({ posts, preview }) {
       <Layout preview={preview}>
         <Container>
           <div className="text-center my-12">
-          <Image
-                  src="/images/fa-logo.svg"
-                  alt="FA Grassroots"
-                  width={100}
-                  height={100}
-                />
-          <h1 className="text-4xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
+            <Image
+              src="/images/fa-logo.svg"
+              alt="FA Grassroots"
+              width={100}
+              height={100}
+            />
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
           </div>
-          <div className="block md:flex">
-            <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s"
-                    className="w-full md:w-8/12 rounded-b-lg h-72 md:h-96 mx-auto md:p-2"
-                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Y0OlBZFxX8s?autoplay=1><img src=https://i.ytimg.com/vi_webp/Y0OlBZFxX8s/sddefault.webp alt='The FA Grassroots National Club of the Year 2019'><span>▶</span></a>"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    title="The FA Grassroots National Club of the Year 2019"
-                    loading="lazy"
-                    >
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/7UMsvMITjg4"
-                    className="w-full md:w-8/12 rounded-b-lg h-72 md:h-96 mx-auto md:p-2"
-                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/7UMsvMITjg4?autoplay=1><img src=https://i.ytimg.com/vi_webp/7UMsvMITjg4/sddefault.webp alt='Cerebral Palsy at Chadderton Park Sports Club'><span>▶</span></a>"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    title="Cerebral Palsy Football"
-                    loading="lazy"
-                    >
-            </iframe>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+            <div>
+              <h2 className="bg-gray-200 px-4">Chadderton Park doesn’t just pride themselves on inclusivity; it defines the club’s entire ethos.</h2>
+              <p className="p-4">We hold no trials, welcome players who have been told they aren’t good enough elsewhere and believe fun must come before the desire to win. That explains why we have now grown to over 90 different teams, covering children, seniors, disability squads and cerebral palsy initiatives.</p>
+            </div>
+            <div>
+              <h2 className="bg-gray-200 px-4">A community focused club, helping local charities across the borough.</h2>
+              <p className="p-4">A football club is more than the name suggests - it can be the heart of a community. Through charity drives, links to local schools and an inherently positive playing environment, Chadderton Park can be truly proud of making a difference.</p>
+            </div>
           </div>
         </Container>
         <Container>
@@ -62,13 +50,11 @@ export default function Index({ posts, preview }) {
         </Container>
         <Container>
           <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Latest News</h1>
-
           {heroPost && (
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />

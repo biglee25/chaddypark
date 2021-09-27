@@ -28,20 +28,37 @@ export async function getStaticProps() {
           width
           height
         }
+        content2 {
+          html
+        }
         image2 {
           url
           width
           height
+        }
+        content3 {
+          html
         }
         image3 {
           url
           width
           height
         }
+        content4 {
+          html
+        }
         image4 {
           url
           width
           height
+        }
+        image5 {
+          url
+          width
+          height
+        }
+        content5 {
+          html
         }
       }
     }
@@ -72,8 +89,8 @@ export default ({ page }) => (
   </Head>
   <Layout>
     <Container>
-      <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
+      <div>
+        <div className="mb-8 text-6xl md:text-6xl font-bold text-center">
           <h1>{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
@@ -84,41 +101,63 @@ export default ({ page }) => (
             layout="responsive"
           />
           <h1 className="text-black">{page.title1}</h1>
-        <div className="bg-primaryyellow my-12 rounded-lg p-5">
-            <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
-        </div>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
-          <div>
+          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="p-12 bg-gray-200" />
+            <div className="flex flex-col justify-center">
             <Image
-                src={page.image1.url}
-                width={page.image1.width}
-                height={page.image1.height}
-                layout="responsive"
+              src={page.image1.url}
+              width={page.image1.width}
+              height={page.image1.height}
+              layout="responsive"
             />
+
+            </div>
           </div>
-          <div>
-            <Image
+          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div className="flex flex-col justify-center">
+              <Image
                 src={page.image2.url}
                 width={page.image2.width}
                 height={page.image2.height}
                 layout="responsive"
-            />
+              />
+            </div>
+          <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
           </div>
-        <Image
-            src={page.image3.url}
-            width={page.image3.width}
-            height={page.image3.height}
-            layout="responsive"
-        />
-        <Image
-            src={page.image4.url}
-            width={page.image4.width}
-            height={page.image4.height}
-            layout="responsive"
-        />
+          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div dangerouslySetInnerHTML={{ __html: page.content3.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
+              <div className="flex flex-col justify-center">
+                <Image
+                  src={page.image3.url}
+                  width={page.image3.width}
+                  height={page.image3.height}
+                  layout="responsive"
+                />
+              </div>
+          </div>
+          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center py-4">
+                <Image
+                  src={page.image4.url}
+                  width={page.image4.width}
+                  height={page.image4.height}
+                  layout="responsive"
+                />
+              </div>
+              <div className="flex flex-col justify-center py-4">
+                <Image
+                  src={page.image5.url}
+                  width={page.image5.width}
+                  height={page.image5.height}
+                  layout="responsive"
+                />
+              </div>
+            </div>
+            <div dangerouslySetInnerHTML={{ __html: page.content4.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
+          </div>
       </div>
-
+      <div dangerouslySetInnerHTML={{ __html: page.content5.html }} className="m-auto w-3/4 bg-gray-700 text-white p-12 flex flex-col items-center" />
     </Container>
   </Layout>
   </>

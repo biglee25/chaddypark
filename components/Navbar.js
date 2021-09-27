@@ -69,6 +69,13 @@ export default function Navbar({ fixed }) {
                 </li>
                 <li>
                   <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <Link href="/videos">
+                        Videos
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/contact">
                         Contact us
                     </Link>
