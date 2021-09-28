@@ -90,9 +90,9 @@ export default ({ page }) => (
   <Layout>
     <Container>
       <div>
-        <div className="mb-8 text-6xl md:text-6xl font-bold text-center">
-          <h1>{page.title}</h1>
-          <h2>{page.subtitle}</h2>
+        <div>
+          <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
+          <h2 className="text-center">{page.subtitle}</h2>
         </div>
         <Image
             src={page.heroImage.url}
@@ -101,8 +101,8 @@ export default ({ page }) => (
             layout="responsive"
           />
           <h1 className="text-black">{page.title1}</h1>
-          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
-            <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="p-12 bg-gray-200" />
+          <div className="rounded-lg md:p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="p-2 md:p-12" />
             <div className="flex flex-col justify-center">
             <Image
               src={page.image1.url}
@@ -113,7 +113,7 @@ export default ({ page }) => (
 
             </div>
           </div>
-          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+          <div className="rounded-lg md:p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
             <div className="flex flex-col justify-center">
               <Image
                 src={page.image2.url}
@@ -122,10 +122,10 @@ export default ({ page }) => (
                 layout="responsive"
               />
             </div>
-          <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
+          <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="p-2 md:p-12 flex flex-col justify-center" />
           </div>
-          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
-            <div dangerouslySetInnerHTML={{ __html: page.content3.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
+          <div className="rounded-lg md:p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <div dangerouslySetInnerHTML={{ __html: page.content3.html }} className="p-2 md:p-12 flex flex-col justify-center" />
               <div className="flex flex-col justify-center">
                 <Image
                   src={page.image3.url}
@@ -135,7 +135,7 @@ export default ({ page }) => (
                 />
               </div>
           </div>
-          <div className="rounded-lg p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+          <div className="rounded-lg md:p-5 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 text-left">
             <div className="flex flex-col justify-center">
               <div className="flex flex-col justify-center py-4">
                 <Image
@@ -154,10 +154,10 @@ export default ({ page }) => (
                 />
               </div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: page.content4.html }} className="p-12 flex flex-col justify-center bg-gray-200" />
+            <div dangerouslySetInnerHTML={{ __html: page.content4.html }} className="p-2 md:p-12 flex flex-col justify-center mb-12" />
           </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: page.content5.html }} className="m-auto w-3/4 bg-gray-700 text-white p-12 flex flex-col items-center" />
+      <div dangerouslySetInnerHTML={{ __html: page.content5.html }} className="text-center mx-auto md:w-3/4 bg-gray-700 text-white p-4 md:p-12" />
     </Container>
   </Layout>
   </>
