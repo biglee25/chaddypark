@@ -8,7 +8,7 @@ export default function Card ( {children} ) {
             <div className="bg-teams-bg bg-top bg-cover bg-no-repeat col-span-2">
                 <Link href="/teams">
                     <a>
-                    <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
+                    <div className="h-96 w-full flex flex-col items-start justify-end bg-black bg-opacity-10 hover:bg-opacity-0 transition duration-500 ease-in-out">
                         <div className="w-full font-bold text-white">
                             <h2 className="bg-black bg-opacity-60">Football Teams</h2>
                         </div>

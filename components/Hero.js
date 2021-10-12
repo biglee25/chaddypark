@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="container mx-auto md:px-2 md:mt-10 lg:mt-16">
-        <div className="bg-hero-bg bg-cover bg-center bg-no-repeat">
+    <section className="mx-auto md:px-2 md:mt-10 lg:mt-12">
+        <div className="h-full mx-auto container bg-hero-bg bg-cover bg-center bg-no-repeat">
           <div className="bg-black bg-opacity-30">
             <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left">  
                 <div className="flex flex-col w-full lg:w-1/2 justify-center items-center md:items-start pt-12 pb-24 px-6 text-white">
