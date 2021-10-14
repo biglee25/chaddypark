@@ -42,7 +42,7 @@ export default function Teams({ contacts }) {
       <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center mt-24">
           {contacts.map((contact) => (
-                <div className="container font-bold bg-white shadow-lg h-96">
+                <div className="container font-bold bg-white shadow-lg h-96 border-b-4 border-primarygreen">
                   <img
                     src={contact.profileImage.url}
                     width="150px"
