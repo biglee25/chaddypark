@@ -32,7 +32,7 @@ export default function Index({ posts, preview }) {
               excerpt={heroPost.excerpt}
             />
           )}
-          morePosts.length > 0 && <MoreStories posts={morePosts} />
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>
