@@ -267,17 +267,19 @@ export default ({ team }) => (
           <h1>{team.title}</h1>
           <h2>{team.heading}</h2>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
         <Image
             src={team.image.url}
             width={team.image.width}
             height={team.image.height}
             layout="responsive"
           />
-          <div className="bg-primaryyellow my-12 rounded-lg p-5">
-          <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
+          <div className="bg-gray-200 rounded-lg p-5 flex flex-col justify-center">
+            <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
           </div>
+        </div>
       </div>
-      <h1 className="text-center pb-12">{team.title} Coaches</h1>
+      <h1 className="text-center pb-12 font-black">{team.title} Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-5 md:py-12 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: team.profile.html }} className="m-auto md:mr-auto text-black" />
@@ -366,22 +368,22 @@ export default ({ team }) => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
         <img
         src={team.gallery1?.url}
-        width={team.gallery1?.width}
-        height={team.gallery1?.height}
+        width="100%"
+        height="100%"
         />
         <img
         src={team.gallery2?.url}
-        width={team.gallery2?.width}
+        width="100%"
         height={team.gallery2?.height}
         />
         <img
         src={team.gallery3?.url}
-        width={team.gallery3?.width}
+        width="100%"
         height={team.gallery3?.height}
         />
         <img
         src={team.gallery4?.url}
-        width={team.gallery4?.width}
+        width="100%"
         height={team.gallery4?.height}
         />
       </div>
