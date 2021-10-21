@@ -365,7 +365,7 @@ export default ({ team }) => (
         <div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-stretch">
         <img
         src={team.gallery1?.url}
         width="100%"
@@ -374,17 +374,17 @@ export default ({ team }) => (
         <img
         src={team.gallery2?.url}
         width="100%"
-        height={team.gallery2?.height}
+        height="100%"
         />
         <img
         src={team.gallery3?.url}
         width="100%"
-        height={team.gallery3?.height}
+        height="100%"
         />
         <img
         src={team.gallery4?.url}
         width="100%"
-        height={team.gallery4?.height}
+        height="100%"
         />
       </div>
       <div>
