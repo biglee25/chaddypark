@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const { teams } = await graphcms.request(
     `
     query MyQuery {
-      teams {
+      teams (orderBy: order_ASC) {
         slug
         title
         image {

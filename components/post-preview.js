@@ -16,7 +16,7 @@ export default function PostPreview({
       </div>
       <div className="px-4">
         <h3 className="mb-3 text-3xl leading-snug">
-          <a className="font-bold bg-gray-700 text-white p-2">{title}</a>
+          <a className="font-bold text-black">{title}</a>
         </h3>
         <div className="mb-4 text-lg">
           <Date dateString={date} />
