@@ -11,7 +11,7 @@ export default function PostPreview({
 }) {
   return (
     <div className="bg-white">
-      <div className="mb-5 ">
+      <div className="mb-5 items-stretch">
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
       <div className="px-4">
