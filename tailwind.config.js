@@ -12,6 +12,7 @@ module.exports = {
         'adultfun-bg': "url('/images/adultfun.webp')",
         'steppers-bg': "url('/images/steppers.webp')",
         'community-bg': "url('/images/community.webp')",
+        'photocomp-bg': "url('/images/photocomp.webp')",
         'awards-bg': "url('/images/awards.webp')",
         'voluntaryjobs-bg': "url('/images/voluntaryjobs.webp')",
        }),

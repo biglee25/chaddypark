@@ -60,7 +60,7 @@ export default function Card ( {children} ) {
                     </a>
                 </Link>
             </div>
-            <div className="bg-voluntaryjobs-bg bg-center bg-cover bg-no-repeat col-start-1 md:col-start-1 col-span-2 md:col-span-1">
+            <div className="bg-voluntaryjobs-bg bg-center bg-cover bg-no-repeat col-start-1 md:col-start-1 col-span-1 md:col-span-1">
                 <Link href="/jobs">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
@@ -71,7 +71,18 @@ export default function Card ( {children} ) {
                     </a>
                 </Link>
             </div>
-            <div className="bg-community-bg bg-top bg-cover bg-no-repeat col-start-1 md:col-start-2 col-span-2">
+            <div className="bg-photocomp-bg bg-top bg-cover bg-no-repeat col-start-1 md:col-start-2 col-span-1">
+                <Link href="/photo-competition">
+                    <a>
+                    <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
+                        <div className="w-full font-bold text-white">
+                            <h2 className="bg-black bg-opacity-60">Photo Competition</h2>
+                        </div>
+                    </div>
+                    </a>
+                </Link>
+            </div>
+            <div className="bg-community-bg bg-top bg-cover bg-no-repeat col-start-1 md:col-start-3 col-span-1">
                 <Link href="/community">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
