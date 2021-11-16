@@ -1,6 +1,5 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 
@@ -8,8 +7,7 @@ import Layout from '../components/layout'
 
 
 export default function Index({ posts, preview }) {
-  const heroPost = posts[0]
-  const morePosts = posts.slice(1)
+  const morePosts = posts.slice(0)
   return (
     <>
       <Head>
@@ -20,18 +18,6 @@ export default function Index({ posts, preview }) {
       </Head>
         <Layout>
         <Container>
-          <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Latest News</h1>
-
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>

@@ -10,8 +10,8 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div className="bg-white">
-      <div className="mb-5 items-stretch">
+    <div className="bg-white flex flex-col justify-between">
+      <div className="mb-5">
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
       <div className="px-4">
@@ -23,7 +23,7 @@ export default function PostPreview({
         </div>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <button className="bg-gray-800 text-white hover:bg-gray-600 w-full md:w-56 px-24 md:px-12 py-5 my-8">
+        <button className="bg-black text-white hover:bg-gray-700 shadow-lg w-full px-24 md:px-12 py-5 my-8">
           Read More
         </button>
       </Link>

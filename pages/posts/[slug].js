@@ -4,7 +4,6 @@ import Container from '../../components/container'
 import PostBody from '../../components/post-body'
 import MoreStories from '../../components/more-stories'
 import PostHeader from '../../components/post-header'
-import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/graphcms'
 import PostTitle from '../../components/post-title'
@@ -37,7 +36,6 @@ export default function Post({ post, morePosts, preview }) {
               />
               <PostBody content={post.content} />
             </article>
-            <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}

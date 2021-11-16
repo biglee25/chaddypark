@@ -21,6 +21,7 @@ export async function getStaticProps() {
           height
         }
         headline
+        content
       }
     }
     `
@@ -47,17 +48,17 @@ export default function Teams({ photos }) {
       <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Photo Competition</h1>
         <p className="text-center">Send us a Photo with the Chaddy Park scarf and we will post it on this page</p>
         <p className="text-center">There are many prizes to be won</p>
-        <div className="w-full md:w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:p-12 m-auto">
+        <div className="w-full md:w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center md:p-12 m-auto">
           {photos.map((photo) => (
               <div className="shadow-xl flex flex-col justify-between">
-                <img
+                <Image
                   src={photo.image.url}
                   width={photo.image.width}
-                  height="550px"
-                  className="p-5"
+                  height={photo.image.height}
                 />
-               <div className="py-5 text-black items-stretch my-auto" key={photo.id}>
-                  {photo.headline}
+               <div className="py-5 text-black tracking-tighter leading-tight text-center items-stretch my-auto px-2">
+                 <h2>{photo.headline}</h2> 
+                  {photo.content}
                 </div>
               </div>
           ))}

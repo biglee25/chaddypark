@@ -9,8 +9,8 @@ export default function Card ( {children} ) {
                 <Link href="/teams">
                     <a>
                     <div className="h-96 w-full flex flex-col items-start justify-end bg-black bg-opacity-10 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Football Teams</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Football Teams</h2>
                         </div>
                     </div>
                     </a>
@@ -20,8 +20,8 @@ export default function Card ( {children} ) {
                 <Link href="/pan-disability">
                     <a>
                     <div className="h-96 md:h-full w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Pan Disability Football</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Pan Disability Football</h2>
                         </div>
                     </div>
                     </a>
@@ -31,8 +31,8 @@ export default function Card ( {children} ) {
                 <Link href="/netball">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Netball Teams</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Netball Teams</h2>
                         </div>
                     </div>
                     </a>
@@ -42,8 +42,8 @@ export default function Card ( {children} ) {
                 <Link href="/adult-fun">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Adult Fun</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Adult Fun</h2>
                         </div>
                     </div>
                     </a>
@@ -53,8 +53,8 @@ export default function Card ( {children} ) {
                 <Link href="/steppers-walkers">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Steppers / Walkers Group</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Steppers / Walkers Group</h2>
                         </div>
                     </div>
                     </a>
@@ -64,19 +64,19 @@ export default function Card ( {children} ) {
                 <Link href="/jobs">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Volutary Jobs</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Volutary Jobs</h2>
                         </div>
                     </div>
                     </a>
                 </Link>
             </div>
             <div className="bg-photocomp-bg bg-top bg-cover bg-no-repeat col-start-1 md:col-start-2 col-span-1">
-                <Link href="/photo-competition">
+                <Link href="/photos">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Photo Competition</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 font-medium">Photos</h2>
                         </div>
                     </div>
                     </a>
@@ -86,8 +86,8 @@ export default function Card ( {children} ) {
                 <Link href="/community">
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
-                        <div className="w-full font-bold text-white">
-                            <h2 className="bg-black bg-opacity-60">Community Engagement</h2>
+                        <div className="w-full text-white">
+                            <h2 className="bg-black bg-opacity-60 px-2 lg:px-0 font-medium">Community Engagement</h2>
                         </div>
                     </div>
                     </a>
