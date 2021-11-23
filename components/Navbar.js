@@ -22,7 +22,7 @@ export default function Navbar({ fixed }) {
                   width={75}
                   height={75}
                 />
-              <div className="font-black">Chadderton Park<br />Sports Club</div>
+              <div className="font-black md:text-2xl leading-none md:leading-none">Chadderton Park<br />Sports Club</div>
               </a>
               </Link>
               <button onClick={() => setExpanded(!expanded)} className="text-black cursor-pointer px-3 py-1 flex items-center lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" type="button">
