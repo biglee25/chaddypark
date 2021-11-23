@@ -20,7 +20,7 @@ export default function Footer() {
             />
           </div>
           <div className="px-5">
-            <h3 className="text-2xl font-bold text-center mb-5">
+            <h3 className="text-2xl font-semibold text-center mb-5">
               © {new Date().getFullYear()} chaddertonparkfc.co.uk
             </h3>
             <p className="pb-5 text-center">CHADDY FOLD, Kiln Hill Ln, Chadderton, Oldham OL1 2RR</p>

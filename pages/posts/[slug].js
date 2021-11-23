@@ -9,7 +9,7 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/graphcms'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, morePosts }) {
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
@@ -17,13 +17,13 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+            <article className="bg-white px-4 pb-12">
               <Head>
                 <title>
                   {post.title}
@@ -36,7 +36,9 @@ export default function Post({ post, morePosts, preview }) {
               />
               <PostBody content={post.content} />
             </article>
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            <Container>
+              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            </Container>
           </>
         )}
       </Container>
@@ -55,6 +57,7 @@ export async function getStaticProps({ params, preview = false }) {
   }
 }
 
+
 export async function getStaticPaths() {
   const posts = await getAllPostsWithSlug()
   return {
@@ -64,3 +67,4 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
+

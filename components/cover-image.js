@@ -5,7 +5,7 @@ export default function CoverImage({ title, url, slug }) {
   const image = (
     <Image
       width={2000}
-      height={1200}
+      height={1000}
       layout="responsive"
       alt={`Cover Image for ${title}`}
       src={url}

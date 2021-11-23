@@ -12,7 +12,7 @@ import Card from '../components/card'
 
 export default function Index({ posts, preview }) {
   const heroPost = posts[0]
-  const morePosts = posts.slice(1)
+  const morePosts = posts.slice(0)
   return (
     <>
       <Head>
