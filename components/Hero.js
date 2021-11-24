@@ -12,7 +12,7 @@ export default function Hero() {
                     <p className="leading-normal mb-4">FA Club of the Year, UEFA runners up, 92 Football teams, 1000 players, 13 Netball, Vets League, Cerebral Palsy football.</p>
                     <p className="mb-4">Proud Winners of the Queens Award 2017</p>
                     <Link href="/about">
-                      <button className="bg-primarygreen text-black hover:bg-white hover:text-black shadow-lg w-3/4 md:w-56 px-24 md:px-12 py-5 my-8">Find out more</button>
+                      <button className="bg-white text-black hover:bg-gray-800 hover:text-white shadow-lg w-full md:w-56 py-5 my-8">Find out more</button>
                     </Link>
                 </div>
                 <div className="p-12 mx-auto hidden md:block">
