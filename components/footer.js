@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import Container from './container';
+
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaTwitterSquare } from 'react-icons/fa';
 import { FaInstagramSquare } from 'react-icons/fa';
@@ -9,8 +11,10 @@ import { FaInstagramSquare } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer>
-      <div className="bg-primaryyellow text-black grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 mt-12">
-        <div className="py-12 flex flex-col items-center justify-center px-2">
+      <div className="bg-primaryyellow text-black mt-12">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+          <div className="py-12 flex flex-col items-center justify-center px-2">
           <div className="mb-5">
             <Image
               src="/images/chaddy-logo.svg"
@@ -101,7 +105,10 @@ export default function Footer() {
                   <FaInstagramSquare size="3rem" className="mx-auto" />
                 </a>
           </div>
-              </div>     
+
+          </div>
+        </Container>
+      </div>     
     </footer>
   )
 }

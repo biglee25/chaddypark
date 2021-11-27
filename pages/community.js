@@ -123,23 +123,23 @@ export default ({ page }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
-          <h1>{page.title}</h1>
+      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
-        <img
-            src={page.heroImage.url}
-            width="100%"
-            height={page.heroImage.height}
-            layout="responsive"
-          />
-        <div className="bg-primaryyellow my-12 rounded-lg p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+              src={page.heroImage.url}
+              width={page.heroImage.width}
+              height={page.heroImage.height}
+              layout="responsive"
+            />
+        <div className="bg-gray-200 rounded-lg p-5 text-center">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
+        </div>
         </div>
         <div className="bg-white my-12 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content2.html }} className="text-center mx-auto py-12 flex flex-col items-center justify-center" />
         </div>
-    </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">
           <div>
           <h2 className="text-center bg-black p-2 text-white">{page.title1}</h2>

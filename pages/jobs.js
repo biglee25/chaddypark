@@ -77,15 +77,16 @@ export default ({ page }) => (
           <h1>{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
-        <Image
-            src={page.heroImage.url}
-            width={page.heroImage.width}
-            height={page.heroImage.height}
-            layout="responsive"
-          />
-          <h1 className="text-black">{page.title1}</h1>
-        <div className="bg-primaryyellow my-12 rounded-lg p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+              src={page.heroImage.url}
+              width={page.heroImage.width}
+              height={page.heroImage.height}
+              layout="responsive"
+            />
+        <div className="bg-gray-200 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
+        </div>
         </div>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12">

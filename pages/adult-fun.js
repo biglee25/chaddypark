@@ -77,21 +77,21 @@ export default ({ page }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
-          <h1>{page.title}</h1>
+      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
           <h2>{page.subtitle}</h2>
-        </div>
-        <Image
-            src={page.heroImage.url}
-            width={page.heroImage.width}
-            height={page.heroImage.height}
-            layout="responsive"
-          />
-        <div className="bg-primaryyellow my-12 rounded-lg p-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+              src={page.heroImage.url}
+              width={page.heroImage.width}
+              height={page.heroImage.height}
+              layout="responsive"
+            />
+        <div className="bg-gray-200 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
+        </div>
     </div>
-      <h1 className="text-center pb-5 md:pb-12">Contacts</h1>
+      <h1 className="text-center pb-5 md:pb-12 mt-12">Contacts</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center bg-gray-100 p-5 rounded-lg">
         <div className="flex items-center justify-center">
           <div dangerouslySetInnerHTML={{ __html: page.profile1.html }} className="m-auto py-12 text-black" />
@@ -114,7 +114,6 @@ export default ({ page }) => (
           />
         </div>
     </div>
-
     </Container>
   </Layout>
   </>

@@ -111,8 +111,7 @@ export default ({ page }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
-          <h1>{page.title}</h1>
+      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -122,10 +121,9 @@ export default ({ page }) => (
               height={page.heroImage.height}
               layout="responsive"
             />
-        <div className="bg-gray-200 rounded-lg p-5">
+        <div className="bg-gray-200 rounded-lg p-5 text-center">
             <div dangerouslySetInnerHTML={{ __html: page.content1.html }} className="m-auto py-12" />
         </div>
-    </div>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-stretch">
           <div>
