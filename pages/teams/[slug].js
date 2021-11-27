@@ -263,8 +263,7 @@ export default ({ team }) => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="bg-gray-800 text-white flex flex-col items-center justify-center my-12 py-5">
-          <h1>{team.title}</h1>
+      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-none">{team.title}</h1>
           <h2>{team.heading}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
@@ -274,11 +273,10 @@ export default ({ team }) => (
             height={team.image.height}
             layout="responsive"
           />
-          <div className="bg-gray-200 rounded-lg p-5 flex flex-col justify-center">
+          <div className="bg-gray-200 rounded-lg p-5 flex flex-col justify-center text-center">
             <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
           </div>
         </div>
-      </div>
       <h1 className="text-center pb-12 font-black">{team.title} Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-5 md:py-12 rounded-lg">
         <div className="flex items-center justify-center">

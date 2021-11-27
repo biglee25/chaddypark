@@ -92,8 +92,6 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-
-
               <div className="py-12 flex items-center justify-center px-2">
                 <a href="https://www.facebook.com/chadderton.park/" target="_blank" className="px-4">
                   <FaFacebookSquare size="3rem" className="mx-auto" />
@@ -104,8 +102,7 @@ export default function Footer() {
                 <a href="https://www.instagram.com/chaddertonpark/?hl=en" target="_blank" className="px-4">
                   <FaInstagramSquare size="3rem" className="mx-auto" />
                 </a>
-          </div>
-
+            </div>
           </div>
         </Container>
       </div>     
