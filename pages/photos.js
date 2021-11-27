@@ -45,10 +45,10 @@ export default function Teams({ photos }) {
     </Head>
     <Layout>
       <Container>
-      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Photo Competition</h1>
+      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-none text-center">Photo Competition</h1>
         <p className="text-center">Send us a Photo with the Chaddy Park scarf and we will post it on this page</p>
         <p className="text-center">There are many prizes to be won</p>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center p-8 md:p-12 m-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center pt-8 md:p-12 m-auto">
           {photos.map((photo) => (
               <div className="shadow-xl flex flex-col justify-between">
                 <Image

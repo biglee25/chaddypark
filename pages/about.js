@@ -91,7 +91,7 @@ export default ({ page }) => (
     <Container>
       <div>
         <div>
-          <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
+          <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-none text-center">{page.title}</h1>
           <h2 className="text-center">{page.subtitle}</h2>
         </div>
         <Image

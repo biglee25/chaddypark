@@ -45,7 +45,7 @@ export default function Teams({ teams }) {
     </Head>
     <Layout>
       <Container>
-      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Club Videos</h1>
+      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-none text-center">Club Videos</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center m-auto cursor-pointer">
           <div>

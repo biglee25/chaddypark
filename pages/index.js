@@ -31,7 +31,7 @@ export default function Index({ posts, preview }) {
               width={100}
               height={100}
             />
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight text-center">The FA Grassroots National Club of the Year 2019</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter leading-none text-center">The FA Grassroots National Club of the Year 2019</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
             <div>

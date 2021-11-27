@@ -123,7 +123,7 @@ export default ({ page }) => (
   <Layout>
     <Container>
       <div className="text-center">
-      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">{page.title}</h1>
+      <h1 className="text-6xl md:text-6xl font-bold tracking-tighter leading-none text-center">{page.title}</h1>
           <h2>{page.subtitle}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -10,7 +10,7 @@ export default function Card ( {children} ) {
                     <a>
                     <div className="h-96 w-full flex flex-col items-start justify-end bg-black bg-opacity-10 hover:bg-opacity-0 transition duration-500 ease-in-out">
                         <div className="w-full text-white">
-                            <h2 className="bg-black bg-opacity-60 font-medium">Football Teams</h2>
+                            <h2 className="bg-black bg-opacity-60 font-medium">Teams</h2>
                         </div>
                     </div>
                     </a>
@@ -32,7 +32,7 @@ export default function Card ( {children} ) {
                     <a>
                     <div className="h-96 w-full flex flex-col items-center justify-end bg-black bg-opacity-30 hover:bg-opacity-0 transition duration-500 ease-in-out">
                         <div className="w-full text-white">
-                            <h2 className="bg-black bg-opacity-60 font-medium">Netball Teams</h2>
+                            <h2 className="bg-black bg-opacity-60 font-medium">Netball</h2>
                         </div>
                     </div>
                     </a>

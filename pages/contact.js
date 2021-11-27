@@ -40,7 +40,7 @@ export default function Teams({ contacts }) {
     <>
     <Layout>
       <Container>
-      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-tight text-center">Commitee Members</h1>
+      <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter text-center leading-none">Commitee Members</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center mt-24">
           {contacts.map((contact) => (
                 <div className="container font-bold bg-white shadow-lg h-96 border-b-4 border-primarygreen">
