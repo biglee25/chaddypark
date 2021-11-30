@@ -105,6 +105,11 @@ export default function Footer() {
             </div>
           </div>
         </Container>
+        <Container>
+          <div className="text-center py-4">
+            <a href="https://www.invadedbypixels.com" target="_blank">Website by Invaded by Pixels</a>
+          </div>
+        </Container>
       </div>     
     </footer>
   )
