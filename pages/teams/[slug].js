@@ -279,11 +279,11 @@ export default ({ team }) => (
               height={team.image.height}
               layout="responsive"
             />
-          <div className="bg-gray-200 rounded-lg p-5">
+            <div className="bg-gray-200 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
           </div>
         </div>
-        <div className="bg-gray-100 rounded-lg p-5 flex flex-col justify-center text-center">
+        <div className="bg-gray-100 rounded-lg p-5 flex flex-col justify-center mx-auto text-center">
             <div dangerouslySetInnerHTML={{ __html: team.extraContent?.html }} className="m-auto py-12" />
           </div>
       <h1 className="text-center pb-12 font-black">{team.title} Coaches</h1>
