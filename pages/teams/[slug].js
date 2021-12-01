@@ -28,6 +28,9 @@ export async function getStaticProps({ params }) {
           url
           width
         }
+        extraContent {
+          html
+        }
         profile {
             html
         }
@@ -153,6 +156,9 @@ export async function getStaticPaths() {
           url
           width
         }
+        extraContent {
+          html
+        }
         profile {
           html
         }
@@ -267,16 +273,19 @@ export default ({ team }) => (
           <h2>{team.heading}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
-        <Image
-            src={team.image.url}
-            width={team.image.width}
-            height={team.image.height}
-            layout="responsive"
-          />
-          <div className="bg-gray-200 rounded-lg p-5 flex flex-col justify-center text-center">
+          <Image
+              src={team.image.url}
+              width={team.image.width}
+              height={team.image.height}
+              layout="responsive"
+            />
+          <div className="bg-gray-200 rounded-lg p-5">
             <div dangerouslySetInnerHTML={{ __html: team.content.html }} className="m-auto py-12" />
           </div>
         </div>
+        <div className="bg-gray-100 rounded-lg p-5 flex flex-col justify-center text-center">
+            <div dangerouslySetInnerHTML={{ __html: team.extraContent?.html }} className="m-auto py-12" />
+          </div>
       <h1 className="text-center pb-12 font-black">{team.title} Coaches</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-5 md:py-12 rounded-lg">
         <div className="flex items-center justify-center">
