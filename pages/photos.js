@@ -1,5 +1,3 @@
-
-import Link from 'next/link';
 import { GraphQLClient } from 'graphql-request';
 import Layout from '../components/layout';
 import Container from '../components/container';

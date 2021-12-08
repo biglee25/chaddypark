@@ -9,7 +9,7 @@ module.exports = {
         'teams-bg': "url('/images/teams.webp')",
         'disablity-bg': "url('/images/disablity.webp')",
         'netball-bg': "url('/images/netball.webp')",
-        'adultfun-bg': "url('/images/adultfun.webp')",
+        'adultfun-bg': "url('/images/kit.webp')",
         'steppers-bg': "url('/images/steppers.webp')",
         'community-bg': "url('/images/community.webp')",
         'photocomp-bg': "url('/images/photocomp.webp')",
