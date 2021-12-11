@@ -46,7 +46,7 @@ export default function Teams({ teams }) {
     <Layout>
       <Container>
       <h1 className="mb-8 text-6xl md:text-6xl font-bold tracking-tighter leading-none text-center">Club Videos</h1>
-
+        <h2 className="text-center py-4">Check out our <a href="https://www.youtube.com/user/silkysim/videos" target="_blank"><span className="text-red-500">Youtube</span></a> channel for more videos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center m-auto cursor-pointer">
           <div>
             <iframe src="https://www.youtube.com/embed/Y0OlBZFxX8s"
@@ -176,6 +176,33 @@ export default function Teams({ teams }) {
           </div>
           <div>
             <iframe src="https://www.youtube.com/embed/0MW2gMtdrdc"
+                    className="w-full h-96 mx-auto shadow-lg bg-black"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+              </iframe>
+          </div>
+          <div>
+            <iframe src="https://www.youtube.com/embed/CiT-4V3IZFQ"
+                    className="w-full h-96 mx-auto shadow-lg bg-black"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+              </iframe>
+          </div>
+          <div>
+            <iframe src="https://www.youtube.com/embed/CU9eBfaajzI"
+                    className="w-full h-96 mx-auto shadow-lg bg-black"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+              </iframe>
+          </div>
+          <div>
+            <iframe src="https://www.youtube.com/embed/PeLn8GgEuF4"
                     className="w-full h-96 mx-auto shadow-lg bg-black"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
