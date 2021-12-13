@@ -6,6 +6,7 @@ import Container from './container';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaTwitterSquare } from 'react-icons/fa';
 import { FaInstagramSquare } from 'react-icons/fa';
+import { FaYoutubeSquare } from 'react-icons/fa';
 
 
 export default function Footer() {
@@ -93,14 +94,17 @@ export default function Footer() {
                 </li>
               </ul>
               <div className="py-12 flex items-center justify-center px-2">
-                <a href="https://www.facebook.com/chadderton.park/" target="_blank" className="px-4">
+                <a href="https://www.facebook.com/chadderton.park/" target="_blank" className="px-2">
                   <FaFacebookSquare size="3rem" className="mx-auto" />
                 </a>
-                <a href="https://twitter.com/chaddypark?lang=en" target="_blank" className="px-4">
+                <a href="https://twitter.com/chaddypark?lang=en" target="_blank" className="px-2">
                   <FaTwitterSquare size="3rem" className="mx-auto" />
                 </a>
-                <a href="https://www.instagram.com/chaddertonpark/?hl=en" target="_blank" className="px-4">
+                <a href="https://www.instagram.com/chaddertonpark/?hl=en" target="_blank" className="px-2">
                   <FaInstagramSquare size="3rem" className="mx-auto" />
+                </a>
+                <a href="https://www.youtube.com/user/silkysim/videos" target="_blank" className="px-2">
+                  <FaYoutubeSquare size="3rem" className="mx-auto" />
                 </a>
             </div>
           </div>
