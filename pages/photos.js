@@ -11,7 +11,7 @@ export async function getStaticProps() {
   const { photos } = await graphcms.request(
     `
     query MyQuery {
-      photos {
+      photos(orderBy: updatedAt_DESC) {
         image {
           id
           url
