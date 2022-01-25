@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import Hamburger from 'hamburger-react'
 
+
 export default function Navbar({ fixed }) {
 
     const [expanded, setExpanded] = useState(false)
@@ -42,7 +43,7 @@ export default function Navbar({ fixed }) {
                 <li>
                   <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out active:bg-black" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                     <Link href="/about">
-                        About us
+                        About
                     </Link>
                   </a>
                 </li>
@@ -56,7 +57,7 @@ export default function Navbar({ fixed }) {
                 <li>
                   <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/information">
-                        Information
+                        Info
                     </Link>
                   </a>
                 </li>
@@ -84,7 +85,14 @@ export default function Navbar({ fixed }) {
                 <li>
                   <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                   <Link href="/contact">
-                        Contact us
+                        Contact
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                    <Link href="/members">
+                    Members
                     </Link>
                   </a>
                 </li>

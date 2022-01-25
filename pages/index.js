@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 
+
 import Image from 'next/image'
 
 import Card from '../components/card'
@@ -42,6 +43,15 @@ export default function Index({ posts, preview }) {
               <h2 className="bg-gray-200 px-4">A community focused club, helping local charities across the borough.</h2>
               <p className="p-4">A football club is more than the name suggests - it can be the heart of a community. Through charity drives, links to local schools and an inherently positive playing environment, Chadderton Park can be truly proud of making a difference.</p>
             </div>
+          </div>
+        </Container>
+        <Container>
+          <div className="text-center flex flex-col items-center bg-gray-200 p-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter leading-none text-center">Existing Member?</h1>
+          <p className="p-4">Please login in to your account by clicking the button below</p>
+            <a href="https://app.loveadmin.com/ThirdpartyRegistration.aspx?clubID=be660d4259db9b3bfa51c2459dd109a8" target="_blank">
+                <button className="bg-black text-white hover:bg-white hover:text-black shadow-lg w-full md:w-56 p-5 my-8">Click Here to Login</button>
+            </a>
           </div>
         </Container>
         <Container>
