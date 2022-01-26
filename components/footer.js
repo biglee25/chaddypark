@@ -93,7 +93,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-2xl md:text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out">
+                  <a className="px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out">
                     <Link href="/members">
                     Members
                     </Link>
