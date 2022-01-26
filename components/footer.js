@@ -37,14 +37,14 @@ export default function Footer() {
         <ul className="flex flex-col align-center justify-center list-none mx-auto py-12">
           <h2 className="mx-auto">Links</h2>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out " onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out">
                   <Link href="/">
                         Home
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a className="px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out active:bg-black" onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
+                  <a className="px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-black hover:bg-black hover:text-white hover:transition hover:duration-500 hover:ease-in-out">
                     <Link href="/about">
                         About us
                     </Link>
