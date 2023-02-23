@@ -50,7 +50,7 @@ export default function Teams({ teams }) {
             <Link href={`/teams/${encodeURIComponent(team.slug)}`}>
               <a>
               <div className="shadow-xl flex flex-col justify-between min-h-full">
-                <div className="py-5 bg-gray-800 hover:bg-black text-white items-stretch" key={team.id}>
+                <div className="py-5 bg-red-800 hover:bg-black text-white items-stretch" key={team.id}>
                   {team.title}
                 </div>
                 <Image
