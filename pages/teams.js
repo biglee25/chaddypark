@@ -57,6 +57,7 @@ export default function Teams({ teams }) {
                   src={team.image.url}
                   width={team.image.width}
                   height="450px"
+                  ClassName="items-stretch"
                 />
               </div>
               </a>
