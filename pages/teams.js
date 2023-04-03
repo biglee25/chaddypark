@@ -56,7 +56,7 @@ export default function Teams({ teams }) {
                 <Image
                   src={team.image.url}
                   width={team.image.width}
-                  height="450px"
+                  height={team.image.height}
                 />
               </div>
               </a>
