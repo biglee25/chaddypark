@@ -28,7 +28,7 @@ export default function Index({ posts, preview }) {
           <div className="text-center my-12">
             <Image
               src="/images/fa-logo.svg"
-              alt="FA Grassroots."
+              alt="FA Grassroots"
               width={100}
               height={100}
             />
@@ -36,7 +36,7 @@ export default function Index({ posts, preview }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
             <div>
-              <h2 className="bg-gray-200 px-4">Chadderton Park doesn’t just pride themselves on inclusivity; it defines the club’s entire ethos.</h2>
+              <h2 className="bg-gray-200 px-4">Chadderton Park doesn’t just pride themselves on inclusivity, it defines the club’s entire ethos.</h2>
               <p className="p-4">We hold no trials, welcome players who have been told they aren’t good enough elsewhere and believe fun must come before the desire to win. That explains why we have now grown to over 90 different teams, covering children, seniors, disability squads and cerebral palsy initiatives.</p>
             </div>
             <div>
