@@ -28,7 +28,7 @@ export default function Index({ posts, preview }) {
           <div className="text-center my-12">
             <Image
               src="/images/fa-logo.svg"
-              alt="FA Grassroots"
+              alt="FA Grassroots."
               width={100}
               height={100}
             />
