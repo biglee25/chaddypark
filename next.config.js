@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['media.graphassets.com']
+    domains: ['eu-central-1-shared-eucl-02.graphassets.com']
   },
   experimental: {
     workerThreads: false,
