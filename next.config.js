@@ -1,9 +1,15 @@
-module.exports = {
+// next.config.js
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ['eu-central-1-shared-eucl-02.graphassets.com']
-  },
-  experimental: {
-    workerThreads: false,
-    cpus: 1
-  }
-};
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.graphassets.com',
+      },
+     ]
+    },
+}
+module.exports = nextConfig
